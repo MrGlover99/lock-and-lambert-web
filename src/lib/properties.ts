@@ -5,11 +5,12 @@
  *   /Users/zacharysimmons/The Burgerly/Brand Source of Truth/Outputs/
  *     2026-05-20-TASK-033c-v2-lock-and-lambert-copy-tight.md
  *
- * Airbnb listing IDs from Phase 0.5 inventory:
- *   /Users/zacharysimmons/The Burgerly/Brand Source of Truth/Outputs/
- *     2026-05-20-TASK-033-phase-0.5-airbnb-guesty-inventory.md
+ * Airbnb listing IDs from Phase 0.5 inventory.
+ * Amenities pulled from each Airbnb listing's "Show all amenities" modal
+ * 2026-05-20 via Chrome navigation, then curated for L&L voice (no
+ * generic-Airbnb adjectives, ingredient-list rhythm, group-by-category).
  *
- * Guesty widget IDs are read from environment variables at render time
+ * Guesty widget IDs read from env at render time
  * (see .env.example NEXT_PUBLIC_GUESTY_LISTING_WIDGET_*).
  */
 
@@ -19,46 +20,29 @@ export type PropertySlug =
   | 'lambert-unit-2'
   | 'lambert-house';
 
+export interface AmenityGroup {
+  group: string;
+  items: string[];
+}
+
 export interface Property {
   slug: PropertySlug;
-  /** Public-facing title (matches Airbnb listing) */
   title: string;
-  /** Short title used in nav, breadcrumbs, cards */
   shortTitle: string;
-  /** Card headline — v2 copy doc Property cards */
   cardHeadline: string;
-  /** Fact strip — v2 copy doc, separator: " · " */
   factStrip: string;
-  /** Address shown on the property detail page + footer of card */
   address: string;
-  /** Town label for tagging / cross-link */
   town: 'New Hope, PA' | 'Lambertville, NJ';
-  /** Detail body — the editorial paragraph, v2 copy doc Property detail pages */
   detailBody: string;
-  /** Sleeps */
   sleeps: number;
-  /** Amenity callouts — sparse text strip per v2 spec §3.3 §4 */
-  amenities: string[];
-  /** "Where you'll be" prose per v2 spec §3.3 §5 */
+  /** Grouped amenities, brand-voiced, pulled from Airbnb 2026-05-20 */
+  amenities: AmenityGroup[];
   whereYoullBe: string;
-  /** Airbnb listing ID */
   airbnbListingId: string;
-  /** Airbnb public URL */
   airbnbUrl: string;
-  /**
-   * Env var name carrying the Guesty per-property widget script src
-   * (per .env.example). Pulled lazily on the detail page.
-   */
   guestyWidgetEnvVar: string;
-  /**
-   * Photo slugs — file basenames inside /public/photos/[slug]/.
-   * Photos are placeholder-flagged until Zach downloads from the Airbnb library.
-   * Carousel iterates this array in order; first photo is also the card hero.
-   */
   photoSlugs: string[];
-  /** Whether this property appears in the home-page 3-up grid */
   showInHomeGrid: boolean;
-  /** Whether this is a bundle SKU (RVR Entire House) */
   isBundle: boolean;
 }
 
@@ -75,13 +59,45 @@ export const PROPERTIES: Record<PropertySlug, Property> = {
       'Two bedrooms upstairs at the back of the building. Three queens. The back door opens onto the canal and the towpath. The front door opens onto Main Street. The wooden lockhouse is right there.\n\nDownstairs, the same building: The Burgerly.',
     sleeps: 6,
     amenities: [
-      'Smartlock',
-      'Stocked kitchen',
-      'Fast Wi-Fi',
-      'Pets welcome',
-      '3 queen beds',
-      '1 bath',
-      'Driveway parking',
+      {
+        group: 'Check-in & access',
+        items: ['Smartlock self check-in', 'Free driveway parking', 'Pets welcome'],
+      },
+      {
+        group: 'Kitchen',
+        items: [
+          'Full kitchen, stocked to cook',
+          'Stove, oven, microwave, dishwasher',
+          'Fridge + freezer',
+          'Coffee, kettle, toaster, blender',
+          'Wine glasses, dishes, cooking basics',
+          'Dining table',
+        ],
+      },
+      {
+        group: 'Beds & laundry',
+        items: ['3 queen beds', '1 bath', 'Washer (in unit)', 'Linens, extra pillows + blankets', 'Iron + hangers'],
+      },
+      {
+        group: 'Bath',
+        items: ['Bathtub', 'Hot water', 'Shampoo, conditioner, body soap, shower gel', 'Hair dryer'],
+      },
+      {
+        group: 'Work & rest',
+        items: ['Fast Wi-Fi', 'Dedicated workspace', 'TV + sound system', 'Books and reading material'],
+      },
+      {
+        group: 'Comfort',
+        items: ['Air conditioning', 'Heating'],
+      },
+      {
+        group: 'Outside',
+        items: ['Private canal-side patio', 'Towpath access out the back door'],
+      },
+      {
+        group: 'Safety',
+        items: ['Smoke + CO alarms', 'Fire extinguisher', 'First aid kit', 'Exterior security cameras', 'Ring doorbell'],
+      },
     ],
     whereYoullBe:
       "137 S. Main, New Hope. The back door opens onto the towpath. The Burgerly is downstairs.",
@@ -96,7 +112,11 @@ export const PROPERTIES: Record<PropertySlug, Property> = {
       'kitchen',
       'dining-nook',
       'bedroom-one',
+      'bedroom-two',
+      'bathroom',
       'patio-towpath',
+      'canal-detail',
+      'exterior-front',
     ],
     showInHomeGrid: true,
     isBundle: false,
@@ -113,14 +133,76 @@ export const PROPERTIES: Record<PropertySlug, Property> = {
       'Ground-floor unit in a duplex on Lambert Lane. One bedroom with a queen. Living room with a full pullout. Stocked kitchen. Private backyard, river just past the fence. The New Hope-Lambertville bridge is five minutes on foot.',
     sleeps: 4,
     amenities: [
-      'Smartlock',
-      'Stocked kitchen',
-      'Fast Wi-Fi',
-      'Pets welcome',
-      'Queen bed',
-      'Sofa pullout',
-      'Private backyard',
-      'Metered street parking',
+      {
+        group: 'Check-in & access',
+        items: [
+          'Smartlock self check-in',
+          'Single-level — no stairs inside',
+          'Private street entrance',
+          'Metered street parking',
+          'Pets welcome',
+        ],
+      },
+      {
+        group: 'Kitchen',
+        items: [
+          'Full kitchen, stocked to cook',
+          'Stainless stove, oven, microwave, dishwasher',
+          'Keurig coffee, kettle, toaster, blender',
+          'Wine glasses, dishes, cooking basics',
+          'BBQ utensils',
+          'Dining table',
+        ],
+      },
+      {
+        group: 'Beds & laundry',
+        items: [
+          'Queen bed + full sofa pullout',
+          '1 bath',
+          'Washer + dryer (in unit, free)',
+          'Linens, extra pillows + blankets',
+          'Room-darkening shades',
+          'Iron + hangers + closet',
+        ],
+      },
+      {
+        group: 'Bath',
+        items: ['Hot water', 'Shampoo, conditioner, body soap, shower gel', 'Hair dryer'],
+      },
+      {
+        group: 'Work & rest',
+        items: [
+          'Fast Wi-Fi',
+          'Dedicated workspace (in a room with a door)',
+          'TV',
+          'Books and reading material',
+        ],
+      },
+      {
+        group: 'Comfort',
+        items: ['Air conditioning', 'Radiant heating', 'Baby safety gates'],
+      },
+      {
+        group: 'Outside',
+        items: [
+          'Private fully-fenced backyard',
+          'Patio + outdoor furniture',
+          'Outdoor dining area',
+          'Fire pit',
+          'BBQ grill',
+          'Bikes',
+          'Waterfront — river right past the fence',
+        ],
+      },
+      {
+        group: 'Safety',
+        items: [
+          'Smoke + CO alarms',
+          'Fire extinguisher',
+          'First aid kit',
+          'Exterior security cameras (backyard, side yard, front porch)',
+        ],
+      },
     ],
     whereYoullBe:
       '13 Lambert Lane, Lambertville. The river is just past the fence. The bridge to New Hope is five minutes on foot.',
@@ -131,10 +213,15 @@ export const PROPERTIES: Record<PropertySlug, Property> = {
       'hero-backyard-bridge',
       'exterior-front',
       'living-room',
+      'living-room-alt',
       'kitchen',
+      'kitchen-alt',
       'bedroom-queen',
+      'bedroom-alt',
       'bathroom',
       'sofa-pullout',
+      'backyard-river',
+      'side-garden',
     ],
     showInHomeGrid: true,
     isBundle: false,
@@ -151,14 +238,66 @@ export const PROPERTIES: Record<PropertySlug, Property> = {
       'Upstairs unit at 13 Lambert Lane. Two bedrooms — a king, a queen — each with its own bath. Big sectional in the living room. A second-floor porch that opens to the Delaware.',
     sleeps: 4,
     amenities: [
-      'Smartlock',
-      'Stocked kitchen',
-      'Fast Wi-Fi',
-      'Pets welcome',
-      'King + queen beds',
-      '2 baths',
-      'River-view porch',
-      'Metered street parking',
+      {
+        group: 'Check-in & access',
+        items: [
+          'Smartlock self check-in',
+          'Private street entrance',
+          'Metered street parking',
+          'Pets welcome',
+        ],
+      },
+      {
+        group: 'Kitchen',
+        items: [
+          'Full kitchen, stocked to cook',
+          'Stove, oven, microwave, dishwasher',
+          'Keurig coffee, toaster, blender',
+          'Wine glasses, dishes, cooking basics',
+          'Dining table',
+        ],
+      },
+      {
+        group: 'Beds & laundry',
+        items: [
+          'King + queen — each bedroom has its own bath',
+          '2 baths',
+          'Washer + dryer (in unit)',
+          'Linens, extra pillows + blankets',
+          'Room-darkening shades',
+          'Iron + hangers',
+        ],
+      },
+      {
+        group: 'Bath',
+        items: ['Hot water', 'Shampoo, conditioner, body soap, shower gel', 'Hair dryer'],
+      },
+      {
+        group: 'Work & rest',
+        items: ['Fast Wi-Fi', 'Dedicated workspace', 'TV', 'Books and reading material'],
+      },
+      {
+        group: 'Comfort',
+        items: ['Air conditioning', 'Heating', 'Baby safety gates'],
+      },
+      {
+        group: 'Outside',
+        items: [
+          'Second-floor porch over the Delaware',
+          'Backyard with outdoor dining',
+          'Bikes',
+        ],
+      },
+      {
+        group: 'Safety',
+        items: [
+          'Smoke + CO alarms',
+          'Fire extinguisher',
+          'First aid kit',
+          'Exterior security cameras (all sides)',
+          'Noise decibel monitors (no audio recording)',
+        ],
+      },
     ],
     whereYoullBe:
       '13 Lambert Lane, upstairs. The porch opens to the Delaware. The bridge to New Hope is five minutes on foot.',
@@ -167,12 +306,17 @@ export const PROPERTIES: Record<PropertySlug, Property> = {
     guestyWidgetEnvVar: 'NEXT_PUBLIC_GUESTY_LISTING_WIDGET_LAMBERT_UNIT_2',
     photoSlugs: [
       'living-sectional-river',
+      'living-alt',
       'porch-river',
       'exterior-front',
       'bedroom-king',
+      'bedroom-king-alt',
       'bedroom-queen',
       'kitchen',
+      'kitchen-alt',
       'bathroom-master',
+      'dining-area',
+      'staircase',
     ],
     showInHomeGrid: true,
     isBundle: false,
@@ -189,14 +333,72 @@ export const PROPERTIES: Record<PropertySlug, Property> = {
       'Book both Lambert units together. The whole duplex. Three bedrooms, three baths, sleeps eight. Private backyard. Same river. Same bridge.',
     sleeps: 8,
     amenities: [
-      'Smartlock',
-      'Two stocked kitchens',
-      'Fast Wi-Fi',
-      'Pets welcome',
-      'Both units combined',
-      '3 bedrooms / 3 baths',
-      'Private backyard',
-      'Metered street parking',
+      {
+        group: 'Check-in & access',
+        items: [
+          'Smartlock self check-in',
+          'Private street entrance',
+          'Metered street parking',
+          'Pets welcome',
+          'Both units, all yours',
+        ],
+      },
+      {
+        group: 'Kitchens',
+        items: [
+          'Two full kitchens, both stocked',
+          'Stove, oven, microwave, dishwasher in each',
+          'Keurig coffee, toaster, blender',
+          'Wine glasses, dishes, cooking basics',
+          'BBQ utensils + outdoor grill',
+          'Dining tables in both units',
+        ],
+      },
+      {
+        group: 'Beds & laundry',
+        items: [
+          'King + queen + queen + full sofa pullout',
+          '3 baths',
+          'Washer + dryer (in unit)',
+          'Linens, extra pillows + blankets',
+          'Room-darkening shades',
+          'Iron + hangers',
+        ],
+      },
+      {
+        group: 'Bath',
+        items: ['Bathtub (Unit 2)', 'Hot water', 'Shampoo, conditioner, body soap, shower gel', 'Hair dryer'],
+      },
+      {
+        group: 'Work & rest',
+        items: ['Fast Wi-Fi', 'Dedicated workspace', 'TVs in both units', 'Books and reading material'],
+      },
+      {
+        group: 'Comfort',
+        items: ['Air conditioning', 'Heating', 'Baby safety gates'],
+      },
+      {
+        group: 'Outside',
+        items: [
+          'Private fully-fenced backyard',
+          'Second-floor porch over the Delaware',
+          'Patio + outdoor dining + outdoor furniture',
+          'Fire pit',
+          'BBQ grill',
+          'Bikes',
+          'Waterfront — river right past the fence',
+        ],
+      },
+      {
+        group: 'Safety',
+        items: [
+          'Smoke + CO alarms',
+          'Fire extinguisher',
+          'First aid kit',
+          'Exterior security cameras (all sides)',
+          'Noise decibel monitors (no audio recording)',
+        ],
+      },
     ],
     whereYoullBe:
       '13 Lambert Lane — the whole house. Private backyard. River just past the fence.',
@@ -210,9 +412,9 @@ export const PROPERTIES: Record<PropertySlug, Property> = {
       'porch-river',
       'kitchen',
       'bedroom-king',
+      'bedroom-queen',
+      'backyard-river',
     ],
-    // Per v2 spec §3 — bundle does not appear in the home grid, but is reachable
-    // via the secondary text link "Booking both Lambert units? See the whole house."
     showInHomeGrid: false,
     isBundle: true,
   },

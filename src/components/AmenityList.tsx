@@ -1,30 +1,32 @@
+import type { AmenityGroup } from '@/lib/properties';
+
 /**
- * AmenityList — sparse text strip per v2 spec §3.3 §4.
- * Single-line callouts. No icons (icons feel templated — let the words do
- * the work). Separator: " · " (interpunct).
+ * AmenityList — grouped amenity callouts per v2 spec §3.3 §4, expanded
+ * post-launch to surface the full Airbnb amenity inventory in brand-voiced,
+ * categorized form.
  *
- * Inter 400 / 14px, Stone color for the separators, Ink for the words.
+ * Per v2 §4.5: no icons (icons feel templated — let the words do the work).
+ * Per L&L voice rules: ingredient-list rhythm, separator " · ", no
+ * over-explanation. Categories use small caps in Stone, items in Ink.
  */
 
 interface AmenityListProps {
-  amenities: string[];
+  amenities: AmenityGroup[];
   className?: string;
 }
 
 export function AmenityList({ amenities, className = '' }: AmenityListProps) {
   return (
-    <div
-      className={`font-sans text-sm sm:text-base text-ink leading-relaxed ${className}`.trim()}
-    >
-      {amenities.map((item, i) => (
-        <span key={i}>
-          <span>{item}</span>
-          {i < amenities.length - 1 && (
-            <span className="mx-2 text-stone" aria-hidden="true">
-              ·
-            </span>
-          )}
-        </span>
+    <div className={`grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 ${className}`.trim()}>
+      {amenities.map((group) => (
+        <div key={group.group}>
+          <h3 className="text-xs uppercase tracking-button text-stone mb-3">{group.group}</h3>
+          <ul className="font-sans text-sm sm:text-base text-ink leading-relaxed space-y-1">
+            {group.items.map((item, i) => (
+              <li key={i}>{item}</li>
+            ))}
+          </ul>
+        </div>
       ))}
     </div>
   );
