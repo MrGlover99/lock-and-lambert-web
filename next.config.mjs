@@ -20,6 +20,12 @@ const nextConfig = {
           { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
         ],
       },
+      {
+        // Brand logo assets are CORS-open so they can be pulled into the
+        // Guesty Booking Website editor (cross-origin) for the logo slot.
+        source: '/logo/:path*',
+        headers: [{ key: 'Access-Control-Allow-Origin', value: '*' }],
+      },
     ];
   },
 };
