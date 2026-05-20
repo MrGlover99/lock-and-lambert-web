@@ -4,9 +4,10 @@ import { SmartPhoto } from './PhotoPlaceholder';
  * AboutSection — the editorial About block per v2 spec §3.1 Section 2.
  * Cream background, plenty of breathing room, editorial typography.
  *
- * Copy is locked verbatim in v2 copy doc "About" section.
- * The italic Lock / Lambert / & rendering uses the brand-italic utility
- * class (Cormorant italic copper) — the signature rhythm move.
+ * Copy enriched 2026-05-20 (founder-directed) into a warmer, more
+ * descriptive first-person register — still Zach's own voice, the
+ * operator present. The name breakdown (Lock / Lambert / &) now lives
+ * on the StorySection and the /story page.
  *
  * Right side breakout: small framed photo (Main St Hideaway stained-glass
  * interior detail). Below ~lg breakpoint it stacks under the text.
@@ -32,35 +33,28 @@ export function AboutSection() {
             </h2>
 
             <div className="prose-editorial text-ink max-w-prose space-y-6">
+              <p>I&apos;m Zach, and I run all three of these places myself.</p>
+
               <p>
-                I&apos;m Zach. Three rental units. Two buildings. One bridge between.
+                There are two buildings. One sits on Main Street in New Hope, Pennsylvania, with the
+                old Delaware Canal and a weathered wooden lockhouse out the back door — and a
+                chef-driven burger room, The Burgerly, which I co-own with chef Mark McLean,
+                directly downstairs. The other is a duplex on Lambert Lane in Lambertville, New
+                Jersey, a quiet street with the river just past the fence. Between the two: the
+                bridge, and a five-minute walk across it.
               </p>
 
               <p>
-                <span className="brand-italic">Lock</span> — the canal lock behind 137 S. Main in
-                New Hope. The wooden lockhouse out back is older than the country.
+                What you&apos;ll find inside is the same in all of them. Smartlock check-in, so you
+                arrive on your own time. Kitchens stocked the way you&apos;d stock your own. Beds
+                made up properly, fast Wi-Fi, room to spread out. Pets welcome. And a host who
+                actually answers — usually within the hour — because I live a block away and
+                I&apos;d rather you have a good weekend than not.
               </p>
 
               <p>
-                <span className="brand-italic">Lambert</span> — 13 Lambert Lane in Lambertville.
-                Across the bridge.
+                Park once. Cross the bridge on foot. Let the two towns be one long, slow trip.
               </p>
-
-              <p>
-                <span className="brand-italic">&amp;</span> — the bridge.
-              </p>
-
-              <p>
-                Smartlock check-in. Stocked kitchens. Pets welcome. A host who answers within the
-                hour because he lives a block away.
-              </p>
-
-              <p>
-                Downstairs from the New Hope unit is The Burgerly. I co-own it with chef Mark
-                McLean. Worth the walk down the stairs.
-              </p>
-
-              <p>Park once. Walk the towns.</p>
 
               <p className="text-right font-display italic text-copper pt-4">— Zach</p>
             </div>

@@ -47,6 +47,12 @@ export function Header() {
               About
             </Link>
             <Link
+              href="/story"
+              className="text-sm text-ink hover:text-copper-deep transition-colors duration-200 hidden sm:inline"
+            >
+              Story
+            </Link>
+            <Link
               href="/stay"
               className="inline-flex items-center justify-center bg-river text-cream px-4 sm:px-5 py-2 text-xs sm:text-sm uppercase tracking-button hover:bg-ink transition-colors duration-200"
             >

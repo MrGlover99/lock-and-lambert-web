@@ -1,7 +1,7 @@
 import { Hero } from '@/components/Hero';
 import { AboutSection } from '@/components/AboutSection';
 import { PropertyGrid } from '@/components/PropertyGrid';
-import { TownsBlock } from '@/components/TownsBlock';
+import { StorySection } from '@/components/StorySection';
 import { EmailCapture } from '@/components/EmailCapture';
 
 /**
@@ -23,9 +23,9 @@ export default function HomePage() {
     <>
       <Hero
         variant="full"
-        photoSrc="/photos/brand/bridge-delaware.jpg"
-        photoAlt="The New Hope-Lambertville Bridge spanning the Delaware River — green truss, reflected in still water, dramatic sky"
-        placeholderCaption="The bridge between"
+        photoSrc="/photos/brand/home-hero-yard.jpg"
+        photoAlt="The Lambert Lane backyard in Lambertville — hydrangeas, fence, and the New Hope-Lambertville Bridge through the trees"
+        placeholderCaption="Lambert Lane — the river just past the fence"
         headline={<>A place at the lock. A place on Lambert.</>}
         subhead="Three places to land. Two banks of the Delaware. One bridge between."
         ctaLabel="Find a stay"
@@ -38,7 +38,7 @@ export default function HomePage() {
 
       <PropertyGrid />
 
-      <TownsBlock />
+      <StorySection />
 
       <EmailCapture source="home_footer" tone="cream" />
     </>
