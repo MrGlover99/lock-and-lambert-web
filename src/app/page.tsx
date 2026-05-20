@@ -1,21 +1,46 @@
-// Home page (/) — Milestone 3 build target.
-// Foundation placeholder so the scaffold deploys cleanly.
+import { Hero } from '@/components/Hero';
+import { AboutSection } from '@/components/AboutSection';
+import { PropertyGrid } from '@/components/PropertyGrid';
+import { TownsBlock } from '@/components/TownsBlock';
+import { EmailCapture } from '@/components/EmailCapture';
+
+/**
+ * Home page (/) — assembles the v2 spec §3.1 sections:
+ *   1. Hero — Main St Hideaway canal exterior + locked headline + subhead + Find a stay CTA
+ *   2. About — editorial Zach-solo first-person About block
+ *   3. Properties — 3-up grid + bundle SKU link
+ *   4. About the towns — quiet sister-river-towns paragraph
+ *   5. Email capture — "Coming back? I'll tell you first."
+ *   6. Footer — lives in root layout
+ *
+ * All copy is locked verbatim in:
+ *   /Users/zacharysimmons/The Burgerly/Brand Source of Truth/Outputs/
+ *     2026-05-20-TASK-033c-v2-lock-and-lambert-copy-tight.md
+ */
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen flex items-center justify-center p-8">
-      <div className="text-center max-w-xl">
-        <p className="wordmark text-xs text-stone tracking-wordmark mb-6">LOCK &amp; LAMBERT</p>
-        <h1 className="font-display text-4xl md:text-5xl text-ink mb-6 leading-tight">
-          A place at the lock. A place on Lambert.
-        </h1>
-        <p className="text-stone">
-          Three places to land. Two banks of the Delaware. One bridge between.
-        </p>
-        <p className="mt-12 text-xs text-stone uppercase tracking-button">
-          Site coming together — milestone 1 of 6
-        </p>
-      </div>
-    </main>
+    <>
+      <Hero
+        variant="full"
+        photoSrc="/photos/main-st-hideaway/hero-canal-exterior.jpg"
+        photoAlt="Canal-side exterior of Main St Hideaway in New Hope, PA — white clapboard building with wooden lockhouse and canal walkway"
+        placeholderCaption="Main St Hideaway — canal-side exterior"
+        headline={<>A place at the lock. A place on Lambert.</>}
+        subhead="Three places to land. Two banks of the Delaware. One bridge between."
+        ctaLabel="Find a stay"
+        ctaHref="/stay"
+        showScrollCue
+        priority
+      />
+
+      <AboutSection />
+
+      <PropertyGrid />
+
+      <TownsBlock />
+
+      <EmailCapture source="home_footer" tone="cream" />
+    </>
   );
 }
