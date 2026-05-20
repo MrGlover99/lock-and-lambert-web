@@ -40,10 +40,26 @@ export interface Property {
   whereYoullBe: string;
   airbnbListingId: string;
   airbnbUrl: string;
+  /** Guesty internal listing id — used to deep-link to the Guesty Booking
+   * Website's per-property page. Captured from
+   * lockandlambert.guestybookings.com 2026-05-20. */
+  guestyListingId: string;
   guestyWidgetEnvVar: string;
   photoSlugs: string[];
   showInHomeGrid: boolean;
   isBundle: boolean;
+}
+
+/** Construct the Guesty Booking Website deep-link for a property.
+ * Lands the guest on the matching property page (photos + description + date
+ * picker + Book Now), preserving context vs. dumping them on the generic
+ * search page.
+ */
+export function getGuestyBookingUrl(property: Property): string {
+  const base =
+    process.env.NEXT_PUBLIC_GUESTY_BOOKING_WEBSITE_URL ??
+    'https://lockandlambert.guestybookings.com';
+  return `${base}/en/properties/${property.guestyListingId}?minOccupancy=1`;
 }
 
 export const PROPERTIES: Record<PropertySlug, Property> = {
@@ -103,6 +119,7 @@ export const PROPERTIES: Record<PropertySlug, Property> = {
       "137 S. Main, New Hope. The back door opens onto the towpath. The Burgerly is downstairs.",
     airbnbListingId: '1424556113810378284',
     airbnbUrl: 'https://www.airbnb.com/rooms/1424556113810378284',
+    guestyListingId: '682b4b80ed3fbf0010d99ac8',
     guestyWidgetEnvVar: 'NEXT_PUBLIC_GUESTY_LISTING_WIDGET_MAIN_ST_HIDEAWAY',
     photoSlugs: [
       'hero-canal-exterior',
@@ -208,6 +225,7 @@ export const PROPERTIES: Record<PropertySlug, Property> = {
       '13 Lambert Lane, Lambertville. The river is just past the fence. The bridge to New Hope is five minutes on foot.',
     airbnbListingId: '1112719828551581049',
     airbnbUrl: 'https://www.airbnb.com/rooms/1112719828551581049',
+    guestyListingId: '677530f0999ee70012ff9be5',
     guestyWidgetEnvVar: 'NEXT_PUBLIC_GUESTY_LISTING_WIDGET_LAMBERT_UNIT_1',
     photoSlugs: [
       'hero-backyard-bridge',
@@ -303,11 +321,15 @@ export const PROPERTIES: Record<PropertySlug, Property> = {
       '13 Lambert Lane, upstairs. The porch opens to the Delaware. The bridge to New Hope is five minutes on foot.',
     airbnbListingId: '1169355149577601589',
     airbnbUrl: 'https://www.airbnb.com/rooms/1169355149577601589',
+    guestyListingId: '677530f1ec75700012a49d9f',
     guestyWidgetEnvVar: 'NEXT_PUBLIC_GUESTY_LISTING_WIDGET_LAMBERT_UNIT_2',
     photoSlugs: [
+      // Hero swapped to porch-river per founder direction 2026-05-20 —
+      // Unit 2's marquee feature is the second-floor porch over the Delaware,
+      // not the interior. Place-anchor faster.
+      'porch-river',
       'living-sectional-river',
       'living-alt',
-      'porch-river',
       'exterior-front',
       'bedroom-king',
       'bedroom-king-alt',
@@ -404,6 +426,7 @@ export const PROPERTIES: Record<PropertySlug, Property> = {
       '13 Lambert Lane — the whole house. Private backyard. River just past the fence.',
     airbnbListingId: '1171507131547148743',
     airbnbUrl: 'https://www.airbnb.com/rooms/1171507131547148743',
+    guestyListingId: '677530f016c6d400123fb70e',
     guestyWidgetEnvVar: 'NEXT_PUBLIC_GUESTY_LISTING_WIDGET_LAMBERT_HOUSE',
     photoSlugs: [
       'hero-backyard-bridge',
