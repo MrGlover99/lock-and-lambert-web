@@ -20,11 +20,14 @@ export default function TermsPage() {
       <p className="text-stone text-sm mb-12">Last updated: May 2026</p>
 
       <div className="prose max-w-prose space-y-6 text-ink leading-relaxed">
+        {/* Placeholder text in the brand voice (TASK-046). Real legal copy
+            from a lawyer — including the registered operating entity — is
+            still required before hard launch. */}
         <h2 className="font-display font-medium text-2xl">The basics</h2>
         <p>
-          Lock &amp; Lambert is operated by Zachary Glover. By using this site, you agree to
-          these terms. Use the site lawfully and don&apos;t do anything that breaks it or
-          interferes with other people&apos;s use of it.
+          Lock &amp; Lambert operates three short-term rental properties along the Delaware
+          River. By using this site, you agree to these terms. Use the site lawfully, and
+          don&apos;t do anything that breaks it or interferes with other people&apos;s use of it.
         </p>
 
         <h2 className="font-display font-medium text-2xl pt-6">Booking and stays</h2>
@@ -36,8 +39,8 @@ export default function TermsPage() {
 
         <h2 className="font-display font-medium text-2xl pt-6">Liability</h2>
         <p>
-          The site is provided as-is. Information about the properties is provided in good
-          faith and I try to keep it accurate, but I can&apos;t guarantee everything will be
+          The site is provided as-is. Information about the properties is given in good faith,
+          and we keep it as accurate as we can — but we can&apos;t guarantee everything will be
           exactly as described in every moment of every season.
         </p>
 

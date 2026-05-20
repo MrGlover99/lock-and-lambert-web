@@ -6,24 +6,24 @@ import { Button } from '@/components/Button';
 /**
  * /story — the long-form name + place history page.
  *
- * Voice: full travel-magazine register — founder-directed 2026-05-20
- * (a deliberate override of the v2 tight brand voice; see session log).
+ * Voice: the literary boutique register locked under TASK-046
+ *   (Lock and Lambert/Brand Source of Truth/01 - Brand Voice and Copy.md).
  *
  * Every historical claim here is fact-checked against published sources
- * (Wikipedia, Friends of the Delaware Canal, PA DCNR, Lambertville
- * Historical Society, DRJTBC, US House history archive). Sources are
- * listed at the foot of the page. Per founder instruction: no wrong
- * history or detail.
+ * (Friends of the Delaware Canal, PA DCNR, the Lambertville Historical
+ * Society, the U.S. House history archive, the DRJTBC). Sources are
+ * listed at the foot of the page — per founder instruction, no wrong
+ * history.
  *
- * Corrects the v2 copy's "lockhouse older than the country" line — the
- * Delaware Canal was dug 1827-1832, so the lockhouse is 1830s, not
- * pre-1776.
+ * The Delaware Canal was dug 1827-1832, so the lockhouse is an 1830s
+ * structure — never "older than the country" (that earlier claim was
+ * false and is permanently retired).
  */
 
 export const metadata: Metadata = {
   title: 'The story',
   description:
-    'Where the name comes from — the Delaware Canal lock, the town of Lambertville, and the bridge between. A short history of New Hope and Lambertville.',
+    'Where the name comes from: a lock on the Delaware Canal, the town of Lambertville, and the bridge between — a short history of New Hope and Lambertville.',
 };
 
 function P({ children }: { children: React.ReactNode }) {
@@ -38,26 +38,25 @@ export default function StoryPage() {
         photoSrc="/photos/brand/bridge-delaware.jpg"
         photoAlt="The New Hope-Lambertville Bridge spanning the Delaware River"
         placeholderCaption="The bridge between"
-        headline={<>The name is a map.</>}
-        subhead="A lock, a Lambert, and the bridge between — where Lock & Lambert comes from."
+        headline={<>The name is a small map.</>}
+        subhead="A lock on one bank, a lane on the other, and the bridge between."
       />
 
       {/* Intro */}
       <section className="bg-cream py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 space-y-6">
           <P>
-            Some places ask to be explained. The two river towns of New Hope, Pennsylvania and
-            Lambertville, New Jersey are not among them. Stand on the bridge between them on a clear
-            morning — the Delaware moving slow and bright beneath you, clapboard rooftops and church
-            steeples stacked up both green banks, a heron working the shallows — and the appeal
-            makes its own case.
+            Some places have to be explained. The two river towns of New Hope, Pennsylvania and
+            Lambertville, New Jersey are not among them &mdash; stand on the bridge between them on a
+            bright morning, with the Delaware moving slow beneath you and clapboard rooftops stacked
+            up both green banks, and the place makes its own argument.
           </P>
           <P>
-            The name, though, is worth knowing. <span className="brand-italic">Lock &amp; Lambert</span>{' '}
-            is not an invented word or a founder&apos;s surname. It is, almost literally, a
-            description of where you&apos;ll be staying: a canal lock on the Pennsylvania side, a
-            lane in a town called Lambertville on the New Jersey side, and the bridge that has tied
-            the two together for more than a century. Three words — a small, honest map.
+            The name, though, is worth a few minutes.{' '}
+            <span className="brand-italic">Lock &amp; Lambert</span> is not a founder&apos;s surname
+            or an invented word. It is, almost literally, a description of where you&apos;ll be
+            staying: a lock on the Pennsylvania side, a lane in a town called Lambertville on the
+            New Jersey side, and the bridge that has tied the two together for more than a century.
           </P>
         </div>
       </section>
@@ -69,41 +68,38 @@ export default function StoryPage() {
             <span className="brand-italic">Lock</span>
           </h2>
           <div className="space-y-6">
-            <P>In the spring of 1827, crews began to dig.</P>
             <P>
-              What they were digging was a canal — sixty miles of it, by hand, along the
-              Pennsylvania bank of the Delaware. Five years later, in 1832, the Delaware Canal
-              opened: a long ribbon of still, shallow water running from Bristol in the south up to
-              Easton in the north, laid down to carry anthracite coal out of the mountains and float
-              it toward Philadelphia. Mule teams walked a path beside the water — the towpath — and
-              hauled the loaded boats along at the pace of a slow walk.
+              In the spring of 1827, crews began to dig. What they were digging was a canal &mdash;
+              nearly sixty miles of it, by hand, along the Pennsylvania bank of the Delaware. Five
+              years later the Delaware Canal opened: a long ribbon of still, shallow water running
+              from Bristol in the south up to Easton in the north, laid down to carry anthracite
+              coal out of the mountains toward Philadelphia. Mule teams walked a path beside the
+              water &mdash; the towpath &mdash; and hauled the loaded boats along at the pace of a
+              slow walk.
             </P>
             <P>
-              A canal, unlike a river, cannot simply run downhill. Over its sixty miles, the
-              Delaware Canal has to descend a hundred and sixty-five feet, and to manage that drop
-              without spilling its water away, its builders installed twenty-three locks.
+              A canal, unlike a river, cannot simply run downhill. Over its length the Delaware
+              Canal has to fall a hundred and sixty-five feet, and to manage that drop without
+              losing its water, its builders set twenty-three locks into it. A lock is best thought
+              of as an elevator for boats: a short walled chamber with a heavy wooden gate at each
+              end. A boat floats in, the gates close behind it, water is let in or drained away
+              until the level inside matches the canal ahead, and the far gate swings open &mdash;
+              and the boat goes on, a few feet higher or lower than it was. In the working years a
+              lock-tender lived right beside his lock, in a small house built for the purpose, a
+              lockhouse, so that he could rise and work the gates at whatever hour a mule
+              team&apos;s lantern came around the bend.
             </P>
             <P>
-              If you have never watched one work, a lock is best described as an elevator for boats.
-              It is a short walled chamber with a heavy wooden gate at each end. A boat floats in;
-              the gates close behind it; water is let in or drained out until the level inside the
-              chamber matches the stretch of canal ahead; the far gate swings open; the boat
-              continues on, now a few feet higher or lower than it was. In the canal&apos;s working
-              years a lock-tender lived right beside his lock, in a small house built for the
-              purpose — a lockhouse — so that he could rise and work the gates at whatever hour a
-              mule-team&apos;s lantern came around the bend.
+              Most of America&apos;s towpath canals are gone now &mdash; filled in, paved over, or
+              left to the weeds. The Delaware Canal is the one that survived. It is the only
+              towpath canal of its era still intact along its entire length: watered, walkable, and
+              today a state park you can follow for nearly sixty unbroken miles.
             </P>
             <P>
-              Most of America&apos;s towpath canals are gone now — filled in, paved over, or left to
-              the weeds. The Delaware Canal is the exception: it is the only canal of its era still
-              continuously intact along its full length, watered and walkable, today a state park
-              you can follow for sixty unbroken miles.
-            </P>
-            <P>
-              In New Hope, it runs right through town. Behind the building at 137 South Main Street
-              — the one with our Main St Hideaway on the upper floor — the canal still holds water,
-              and the lock and its small wooden lockhouse, canal-era and weathered to a soft grey,
-              still stand at the back door. That lock is the{' '}
+              In New Hope, the canal runs straight through town. Behind 137 South Main Street
+              &mdash; the building with our Main St Hideaway on the upper floor &mdash; the canal
+              still holds water, and a lock and its small weathered lockhouse, grey with age, still
+              stand at the back door. That lock is the{' '}
               <span className="brand-italic">Lock</span> in Lock &amp; Lambert. You can watch it
               from the patio.
             </P>
@@ -119,24 +115,25 @@ export default function StoryPage() {
           </h2>
           <div className="space-y-6">
             <p className="prose-editorial text-cream/90">
-              Cross the bridge — five minutes on foot — and you are in Lambertville.
+              Cross the bridge &mdash; five minutes on foot &mdash; and you are in Lambertville.
             </p>
             <p className="prose-editorial text-cream/90">
               It did not begin under that name. Like New Hope facing it across the water,
-              Lambertville started as a ferry landing; for decades the crossing here was known as
-              Coryell&apos;s Ferry, after the family who ran the boats. The town took its present
-              name in 1810, the year a post office finally opened on the New Jersey bank. That
-              office was secured through the efforts of a local man who had travelled a long way
-              from the Amwell farmland where he was born: John Lambert — state legislator, acting
+              Lambertville started as a ferry landing; for most of the eighteenth century the
+              crossing here was Coryell&apos;s Ferry, after the family who ran the boats and kept
+              an inn for travelers breaking the journey between Philadelphia and New York. The town
+              took its present name in 1810, the year a post office opened on the New Jersey bank
+              &mdash; an office secured through the efforts of John Lambert, a farmer&apos;s son
+              from the Amwell country nearby who had risen to become a state legislator, acting
               Governor of New Jersey, and, from 1809, a United States Senator. The grateful
               settlement took his name, and has kept it for more than two centuries.
             </p>
             <p className="prose-editorial text-cream/90">
-              Today Lambertville is a town of antique shops and galleries, old stone and clapboard
-              houses, and a riverfront that draws people up from Philadelphia and down from New York
-              for the weekend. Lambert Lane — the quiet lane our River View Retreat duplex sits on,
-              with the Delaware just past the back fence — carries the Senator&apos;s name still.
-              That lane, and that town, are the{' '}
+              Today Lambertville is a town of antique shops and galleries, of old stone and
+              clapboard houses, with a riverfront that has drawn people up from Philadelphia and
+              down from New York for generations. Lambert Lane &mdash; the quiet street our duplex
+              sits on, with the Delaware just past the back fence &mdash; still carries the
+              Senator&apos;s name. That lane, and that town, are the{' '}
               <span className="font-display italic font-normal text-copper-bright">Lambert</span> in
               Lock &amp; Lambert.
             </p>
@@ -158,19 +155,20 @@ export default function StoryPage() {
               The <span className="brand-italic">&amp;</span> is the bridge.
             </P>
             <P>
-              There has been a crossing here for a very long time. The first proper bridge — a
-              covered wooden one, more than a thousand feet long — was raised in 1814. A flood
-              battered it in 1841; its replacement, also covered and wooden, was swept away
-              entirely by the great flood of 1903. The bridge you walk or drive across today is the
-              one that followed: a six-span steel truss, opened in the summer of 1904, and free of
-              tolls since 1919. It is painted a soft green that has, over the decades, become one of
-              the most recognizable sights on this stretch of the river.
+              There has been a crossing here for a very long time. The first true bridge &mdash; a
+              covered wooden one, more than a thousand feet long &mdash; was raised in 1814, the
+              work of Lewis Wernwag, a bridge-builder known up and down the region. A flood damaged
+              it in 1841; the covered bridge that replaced it was swept away entirely by the great
+              flood of 1903. The bridge you walk or drive across today is the one that followed: a
+              six-span steel truss, opened in the summer of 1904, and free of tolls since 1919. It
+              is painted a soft green that has, over the decades, become one of the most familiar
+              sights on this stretch of the river.
             </P>
             <P>
               It is also the reason a stay here is never quite a stay in one town. The bridge makes
-              New Hope and Lambertville a single destination — two banks, one walkable trip, joined
-              by a five-minute walk over moving water. That is the work the ampersand does in our
-              name. Lock <span className="brand-italic">&amp;</span> Lambert. The{' '}
+              New Hope and Lambertville a single place &mdash; two banks, one walkable trip, joined
+              by a five-minute walk over moving water. That is the work the ampersand does in the
+              name. Lock <span className="brand-italic">&amp;</span> Lambert: the{' '}
               <span className="brand-italic">and</span> is the bridge between.
             </P>
           </div>
@@ -181,9 +179,9 @@ export default function StoryPage() {
       <section className="bg-cream pb-20 sm:pb-24">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center space-y-8">
           <p className="prose-editorial text-ink max-w-prose mx-auto">
-            So there it is, unfolded: a lock on one side, a lane in Lambertville on the other, the
-            bridge in the middle. Three places to stay, two towns, one river — and a name that, once
-            you know it, tells you exactly where you&apos;re going.
+            So there it is, unfolded &mdash; a lock on one bank, a lane in Lambertville on the
+            other, and the bridge in the middle. Three places to stay, two towns, one river, and a
+            name that, once you know it, tells you exactly where you are going.
           </p>
           <div className="flex justify-center">
             <Button href="/stay" variant="primary" size="lg">
@@ -198,13 +196,13 @@ export default function StoryPage() {
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <h3 className="text-xs uppercase tracking-button text-stone mb-4">Sources</h3>
           <p className="font-sans text-sm text-stone leading-relaxed">
-            History on this page is drawn from public records: the Friends of the Delaware Canal and
-            the Pennsylvania Department of Conservation and Natural Resources (canal construction,
-            locks, and towpath); the Greater New Hope Chamber of Commerce and Wikipedia (New
-            Hope&apos;s ferry-era names); the Lambertville Historical Society and the U.S. House of
-            Representatives history archive (Lambertville&apos;s naming and Senator John Lambert);
-            and the Delaware River Joint Toll Bridge Commission (the bridge&apos;s 1814, 1904, and
-            1919 milestones). Dates and figures were verified May 2026.
+            The history on this page is drawn from public records and reputable local sources: the
+            Friends of the Delaware Canal and the Pennsylvania Department of Conservation and
+            Natural Resources, for the canal&apos;s construction, its locks, and the towpath; the
+            Lambertville Historical Society and the U.S. House of Representatives history archive,
+            for the town&apos;s naming and for Senator John Lambert; and the Delaware River Joint
+            Toll Bridge Commission, for the bridge and its 1814, 1904, and 1919 milestones. Dates
+            and figures were verified in May 2026.
           </p>
         </div>
       </section>

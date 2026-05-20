@@ -4,7 +4,7 @@ import { BareAmpersand, Wordmark } from './Wordmark';
 /**
  * Header — minimal, sticky-on-scroll, per v2 spec §2 nav pattern.
  *
- * Layout (desktop): [&-mark] [LOCK & LAMBERT wordmark] ... [Rooms] [About] [Find a stay CTA]
+ * Layout (desktop): [&-mark] [LOCK & LAMBERT wordmark] ... [Places] [About] [Story] [Find a stay CTA]
  * Layout (mobile):  [&-mark] [LOCK & LAMBERT] ... [Find a stay] (nav links live below or in a drawer at a later date)
  *
  * Per v2 §2: no hamburger menu — flat nav. Two nav links + one CTA fits.
@@ -38,7 +38,7 @@ export function Header() {
               href="/stay"
               className="text-sm text-ink hover:text-copper-deep transition-colors duration-200 hidden sm:inline"
             >
-              Rooms
+              Places
             </Link>
             <Link
               href="/#about"

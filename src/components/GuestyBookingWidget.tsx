@@ -37,7 +37,7 @@ export function GuestyBookingWidget({ property, className = '' }: GuestyBookingW
     const containerId = `booking-widget_${widgetId}`;
     return (
       <div className={`bg-cream border border-stone/30 p-6 sm:p-8 ${className}`.trim()}>
-        <h3 className="font-display font-medium text-ink text-2xl mb-4">Book this room</h3>
+        <h3 className="font-display font-medium text-ink text-2xl mb-4">Book this place</h3>
         <div id={containerId} />
         <Script src={widgetSrc} strategy="afterInteractive" />
       </div>
@@ -48,9 +48,9 @@ export function GuestyBookingWidget({ property, className = '' }: GuestyBookingW
   // immediately available, book in two clicks.
   return (
     <div className={`bg-cream border border-stone/30 p-6 sm:p-8 ${className}`.trim()}>
-      <h3 className="font-display font-medium text-ink text-2xl mb-4">Book this room</h3>
+      <h3 className="font-display font-medium text-ink text-2xl mb-4">Book this place</h3>
       <p className="text-sm text-stone mb-6 leading-relaxed">
-        Pick your dates and confirm with me.
+        Pick your dates, and we&apos;ll confirm.
       </p>
       <Link
         href={deepLinkUrl}

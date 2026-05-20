@@ -48,7 +48,7 @@ export function WhereYoullBe({ address, town, prose, className = '' }: WhereYoul
           {/* Map slot — placeholder for v1 */}
           <div className="aspect-[4/3] w-full bg-stone/10 border border-stone/30 flex items-center justify-center relative">
             <div className="text-center px-6">
-              <p className="font-display italic text-stone text-lg">Map coming</p>
+              <p className="font-display italic text-stone text-lg">Map on the way</p>
               <p className="font-sans text-xs uppercase tracking-button text-stone mt-2">
                 {town}
               </p>

@@ -4,10 +4,10 @@ import { SmartPhoto } from './PhotoPlaceholder';
  * AboutSection — the editorial About block per v2 spec §3.1 Section 2.
  * Cream background, plenty of breathing room, editorial typography.
  *
- * Copy enriched 2026-05-20 (founder-directed) into a warmer, more
- * descriptive first-person register — still Zach's own voice, the
- * operator present. The name breakdown (Lock / Lambert / &) now lives
- * on the StorySection and the /story page.
+ * Copy reset 2026-05-20 (TASK-046) into the literary boutique voice.
+ * Brand voice — "we" / Lock & Lambert, no individual host figure and no
+ * on-site presence claims (founder direction). The name breakdown
+ * (Lock / Lambert / &) lives on the StorySection and the /story page.
  *
  * Right side breakout: small framed photo (Main St Hideaway stained-glass
  * interior detail). Below ~lg breakpoint it stacks under the text.
@@ -33,30 +33,31 @@ export function AboutSection() {
             </h2>
 
             <div className="prose-editorial text-ink max-w-prose space-y-6">
-              <p>I&apos;m Zach, and I run all three of these places myself.</p>
-
               <p>
-                There are two buildings. One sits on Main Street in New Hope, Pennsylvania, with the
-                old Delaware Canal and a weathered wooden lockhouse out the back door — and a
-                chef-driven burger room, The Burgerly, which I co-own with chef Mark McLean,
-                directly downstairs. The other is a duplex on Lambert Lane in Lambertville, New
-                Jersey, a quiet street with the river just past the fence. Between the two: the
-                bridge, and a five-minute walk across it.
+                New Hope, on the Pennsylvania bank of the Delaware, and Lambertville, on the New
+                Jersey one, are two river towns a single steel bridge joins. Lock{' '}
+                <span className="brand-italic">&amp;</span> Lambert is three places to stay between
+                them.
               </p>
 
               <p>
-                What you&apos;ll find inside is the same in all of them. Smartlock check-in, so you
-                arrive on your own time. Kitchens stocked the way you&apos;d stock your own. Beds
-                made up properly, fast Wi-Fi, room to spread out. Pets welcome. And a host who
-                actually answers — usually within the hour — because I live a block away and
-                I&apos;d rather you have a good weekend than not.
+                One is an apartment above 137 South Main in New Hope, in a building with the old
+                Delaware Canal and a weathered lockhouse just out the back door. The other two make
+                up a duplex on Lambert Lane in Lambertville, a quiet street with the river running
+                past the back fence.
               </p>
 
               <p>
-                Park once. Cross the bridge on foot. Let the two towns be one long, slow trip.
+                What you find inside is the same in all three. Rooms we furnished with a real eye
+                and keep with care. Kitchens stocked to cook in. Beds made up properly, fast Wi-Fi,
+                room to spread out, and a smartlock at the door so you arrive on your own time. Send
+                a message and it gets answered. Pets are welcome — and so are you.
               </p>
 
-              <p className="text-right font-display italic text-copper pt-4">— Zach</p>
+              <p>
+                Park once, cross the bridge on foot, and let the two towns be one long, unhurried
+                trip.
+              </p>
             </div>
           </div>
 

@@ -8,7 +8,7 @@ import { EmailCapture } from '@/components/EmailCapture';
  *
  *   1. Header band hero — bridge-truss-through-trees photo
  *   2. Title: "Find a stay"
- *   3. Subtitle: "Pick your dates. The room finds you."
+ *   3. Subtitle: "Pick your dates below, and we'll take it from there."
  *   4. Guesty Booking Engine search widget (or PropertyGrid fallback)
  *   5. Editorial paragraph echoing the About — keeps brand voice present
  *      even on a transactional page
@@ -17,7 +17,8 @@ import { EmailCapture } from '@/components/EmailCapture';
 
 export const metadata: Metadata = {
   title: 'Find a stay',
-  description: 'Three places to land. Two banks of the Delaware. One bridge between.',
+  description:
+    'Check dates and book one of three places to stay along the Delaware — in New Hope, Pennsylvania, and Lambertville, New Jersey.',
 };
 
 export default function StayPage() {
@@ -29,7 +30,7 @@ export default function StayPage() {
         photoAlt="The New Hope-Lambertville Bridge truss through trees from the Lambert Lane backyard"
         placeholderCaption="Bridge truss through trees — Lambertville"
         headline={<>Find a stay.</>}
-        subhead="Pick your dates. The room finds you."
+        subhead="Pick your dates below, and we'll take it from there."
       />
 
       <GuestySearchWidget />
@@ -40,7 +41,7 @@ export default function StayPage() {
             className="font-display italic text-stone leading-relaxed"
             style={{ fontSize: 'clamp(1.125rem, 2vw, 1.5rem)' }}
           >
-            Three rooms. Two buildings. One bridge between.
+            Three places to stay, in two river towns the bridge makes one.
           </p>
         </div>
       </section>

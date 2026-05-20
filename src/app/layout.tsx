@@ -10,10 +10,11 @@ export const metadata: Metadata = {
     template: '%s — Lock & Lambert',
   },
   description:
-    'Three rentals on the Delaware. One above 137 S. Main in New Hope. Two at 13 Lambert Lane in Lambertville. Smartlock check-in, stocked kitchens, pets welcome. Run by Zach.',
+    'Three places to stay along the Delaware River — an apartment above 137 South Main in New Hope, Pennsylvania, and a riverside duplex on Lambert Lane in Lambertville, New Jersey. Smartlock check-in, stocked kitchens, pets welcome.',
   openGraph: {
     title: 'Lock & Lambert',
-    description: 'Three places to land. Two banks of the Delaware. One bridge between.',
+    description:
+      'Three places to stay along the Delaware, in two old river towns joined by a single bridge.',
     siteName: 'Lock & Lambert',
     type: 'website',
     locale: 'en_US',
@@ -21,7 +22,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Lock & Lambert',
-    description: 'Three places to land. Two banks of the Delaware. One bridge between.',
+    description:
+      'Three places to stay along the Delaware, in two old river towns joined by a single bridge.',
   },
   icons: {
     icon: [

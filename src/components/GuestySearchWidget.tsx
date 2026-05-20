@@ -78,7 +78,7 @@ export function GuestySearchWidget({
       <div className={className}>
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16 text-center">
           <p className="font-display italic text-stone text-base sm:text-lg leading-relaxed">
-            Pick a room below. Or check dates on the{' '}
+            Choose a place below, or check dates on the{' '}
             <a
               href={`https://${siteUrl}`}
               target="_blank"

@@ -16,7 +16,7 @@ interface PropertyGridProps {
 
 export function PropertyGrid({
   className = '',
-  headline = 'Three rooms. Two towns.',
+  headline = 'Three places, one river',
 }: PropertyGridProps) {
   return (
     <section
@@ -46,7 +46,7 @@ export function PropertyGrid({
             href="/properties/lambert-house"
             className="font-display italic text-stone hover:text-copper-deep transition-colors duration-200 text-lg"
           >
-            Booking both Lambert units? See the whole house.
+            Travelling as a larger group? The whole house on Lambert Lane sleeps eight.
           </Link>
         </div>
       </div>

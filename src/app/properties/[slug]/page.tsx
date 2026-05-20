@@ -37,10 +37,10 @@ export function generateMetadata({ params }: PageProps): Metadata {
   if (!property) return {};
   return {
     title: property.title,
-    description: `${property.cardHeadline} ${property.factStrip}`,
+    description: property.seoDescription,
     openGraph: {
       title: `${property.title} — Lock & Lambert`,
-      description: property.cardHeadline,
+      description: property.seoDescription,
       type: 'website',
     },
   };
@@ -62,7 +62,7 @@ export default function PropertyDetailPage({ params }: PageProps) {
       <div className="bg-cream border-b border-stone/15">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3 text-xs uppercase tracking-button text-stone">
           <Link href="/stay" className="hover:text-copper-deep transition-colors">
-            Rooms
+            Places
           </Link>
           <span className="mx-2" aria-hidden="true">/</span>
           <span>{property.shortTitle}</span>

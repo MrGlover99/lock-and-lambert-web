@@ -9,7 +9,7 @@ import Link from 'next/link';
  * 2. Address block — 137 South Main Street · New Hope, PA 18938 · stay@lockandlambert.com
  * 3. Legal/utility — © 2026 · Privacy · Terms
  *
- * Copy is locked verbatim in v2 copy doc Footer section.
+ * Copy in the literary boutique voice locked under TASK-046.
  */
 
 export function Footer() {
@@ -29,7 +29,7 @@ export function Footer() {
 
           {/* Address block */}
           <div>
-            <h4 className="text-xs uppercase tracking-button text-stone mb-4">Find me</h4>
+            <h4 className="text-xs uppercase tracking-button text-stone mb-4">Get in touch</h4>
             <address className="not-italic text-sm leading-relaxed text-cream/90 space-y-1">
               <div>137 South Main Street</div>
               <div>New Hope, PA 18938</div>

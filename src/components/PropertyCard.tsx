@@ -4,13 +4,13 @@ import type { Property } from '@/lib/properties';
 
 /**
  * PropertyCard — used on the home grid (`/`) and the property detail
- * cross-link strip (`/properties/[slug]` → "Other rooms").
+ * cross-link strip (`/properties/[slug]` → "The other places").
  *
  * Per v2 spec §3.1 Section 3:
  *   - Hero photo (4:5 crop on cards)
  *   - Headline in Cormorant Garamond 500
  *   - Fact strip in Inter 400, smaller, lowercase italic, Stone color
- *   - Bottom CTA: "See the room" → /properties/[slug]
+ *   - Bottom CTA: "See the place" → /properties/[slug]
  *
  * Per v2 §4.5: no drop shadows, 0.5px borders for separation.
  */
@@ -68,7 +68,7 @@ export function PropertyCard({
             href={detailHref}
             className="inline-flex items-center text-sm uppercase tracking-button text-river hover:text-ink transition-colors duration-200 border-b border-river/40 hover:border-ink/60 pb-1"
           >
-            See the room
+            See the place
           </Link>
         </div>
       </div>

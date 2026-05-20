@@ -51,7 +51,7 @@ export function CrossLink({ currentSlug, className = '' }: CrossLinkProps) {
           className="font-display font-medium text-ink mb-10 text-center"
           style={{ fontSize: 'clamp(1.625rem, 2.5vw, 2rem)' }}
         >
-          Other rooms
+          The other places
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 max-w-4xl mx-auto">
           {others.map((property) => (

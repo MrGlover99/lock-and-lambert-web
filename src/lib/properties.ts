@@ -1,9 +1,10 @@
 /**
  * Property metadata — single source of truth for all 4 listings.
  *
- * Copy is locked in v2 copy doc:
- *   /Users/zacharysimmons/The Burgerly/Brand Source of Truth/Outputs/
- *     2026-05-20-TASK-033c-v2-lock-and-lambert-copy-tight.md
+ * Copy is in the literary boutique voice locked under TASK-046:
+ *   /Users/zacharysimmons/The Burgerly/Lock and Lambert/Brand Source of
+ *     Truth/01 - Brand Voice and Copy.md
+ * (This supersedes the retired 2026-05-20-TASK-033c-v2 "tight" copy doc.)
  *
  * Airbnb listing IDs from Phase 0.5 inventory.
  * Amenities pulled from each Airbnb listing's "Show all amenities" modal
@@ -31,6 +32,8 @@ export interface Property {
   shortTitle: string;
   cardHeadline: string;
   factStrip: string;
+  /** One-sentence, brand-voiced SEO meta description */
+  seoDescription: string;
   address: string;
   town: 'New Hope, PA' | 'Lambertville, NJ';
   detailBody: string;
@@ -65,14 +68,16 @@ export function getGuestyBookingUrl(property: Property): string {
 export const PROPERTIES: Record<PropertySlug, Property> = {
   'main-st-hideaway': {
     slug: 'main-st-hideaway',
-    title: 'Main St Hideaway w/ Canal Access',
+    title: 'Main St Hideaway',
     shortTitle: 'Main St Hideaway',
-    cardHeadline: 'Above 137 S. Main. The towpath out back.',
-    factStrip: '2 bedrooms · 3 queens · sleeps 6 · canal-side patio · smartlock · pets',
+    cardHeadline: 'Above 137 South Main, the towpath at the back door',
+    factStrip: '2 bedrooms · 3 queen beds · sleeps 6 · canal-side patio · smartlock · pets welcome',
+    seoDescription:
+      'A two-bedroom apartment above 137 South Main in New Hope, Pennsylvania — dark walls, warm light, three queen beds, and a canal-side patio that opens onto the Delaware Canal towpath. Sleeps six.',
     address: '137 S. Main Street (Rear), New Hope, PA 18938',
     town: 'New Hope, PA',
     detailBody:
-      'Two bedrooms upstairs at the back of the building. Three queens. The back door opens onto the canal and the towpath. The front door opens onto Main Street. The wooden lockhouse is right there.\n\nDownstairs, the same building: The Burgerly.',
+      'Up a private stair at the back of 137 South Main is a two-bedroom apartment that feels older and warmer than the street below it. The walls are dark, the lamps throw a low copper light, and the floors carry the gentle unevenness of a building that has stood a long time. There is a leather couch, a wall of books, a panel of stained glass that catches the afternoon. It sleeps six across three queen beds, and the kitchen is stocked well enough that you could cook here all weekend and want to.\n\nThe two doors are the pleasure of the place. Step out the front and you are on Main Street, New Hope, with the shops, the galleries, and the Delaware all a short walk in either direction. Step out the back and you are on the canal towpath — the water moving quietly past, a weathered lockhouse a few steps along, the lock that gave the brand half its name. Carry a coffee out to the canal-side patio, and the morning is yours.',
     sleeps: 6,
     amenities: [
       {
@@ -116,7 +121,7 @@ export const PROPERTIES: Record<PropertySlug, Property> = {
       },
     ],
     whereYoullBe:
-      "137 S. Main, New Hope. The back door opens onto the towpath. The Burgerly is downstairs.",
+      'You are on South Main Street in New Hope — its shops, its galleries, and the Delaware all a short walk away. The back door opens straight onto the canal towpath, with a lock and its weathered lockhouse a few steps along.',
     airbnbListingId: '1424556113810378284',
     airbnbUrl: 'https://www.airbnb.com/rooms/1424556113810378284',
     guestyListingId: '682b4b80ed3fbf0010d99ac8',
@@ -140,14 +145,16 @@ export const PROPERTIES: Record<PropertySlug, Property> = {
   },
   'lambert-unit-1': {
     slug: 'lambert-unit-1',
-    title: 'River View Retreat: Unit 1',
-    shortTitle: 'Lambert Unit 1',
-    cardHeadline: 'Ground floor. 13 Lambert Lane.',
-    factStrip: '1 bedroom · queen + sofa bed · sleeps 4 · river view · smartlock · pets',
+    title: 'The Ground-Floor Apartment on Lambert Lane',
+    shortTitle: 'Lambert Lane — Ground Floor',
+    cardHeadline: 'The ground-floor apartment on Lambert Lane',
+    factStrip: '1 bedroom · queen + sofa bed · sleeps 4 · fenced river yard · smartlock · pets welcome',
+    seoDescription:
+      'The light-filled ground-floor apartment of a duplex on Lambert Lane in Lambertville, New Jersey — one bedroom, a fenced yard down to the Delaware with a fire pit, single-level, pets welcome. Sleeps four.',
     address: '13 Lambert Lane, Apt 1, Lambertville, NJ 08530',
     town: 'Lambertville, NJ',
     detailBody:
-      'Ground-floor unit in a duplex on Lambert Lane. One bedroom with a queen. Living room with a full pullout. Stocked kitchen. Private backyard, river just past the fence. The New Hope-Lambertville bridge is five minutes on foot.',
+      "The ground floor of a two-apartment house on Lambert Lane, a quiet street that ends at the river. Inside, it is light where the New Hope place is dark — pale walls, soft blush and green, everything on one level with no stairs to manage. One bedroom holds a queen; the living room has a full pullout, so the apartment sleeps four without anyone feeling sent to the couch. The kitchen is stocked to cook in, and there is a proper table to gather around.\n\nThe back of the house is the reason to book it. A fully fenced yard runs down toward the Delaware — patio chairs, a fire pit, a grill, a couple of bikes leaning by the fence — and the river is right there, just past the rails. Through the trees you can see the green truss of the bridge to New Hope, five minutes away on foot.\n\nIt is an easy place to arrive with a dog, or a small child, or both — and we keep it ready for exactly that.",
     sleeps: 4,
     amenities: [
       {
@@ -222,7 +229,7 @@ export const PROPERTIES: Record<PropertySlug, Property> = {
       },
     ],
     whereYoullBe:
-      '13 Lambert Lane, Lambertville. The river is just past the fence. The bridge to New Hope is five minutes on foot.',
+      'Lambert Lane is a quiet street in Lambertville that runs down to the Delaware. The river is just past the back fence, and the bridge across to New Hope is a five-minute walk from the door.',
     airbnbListingId: '1112719828551581049',
     airbnbUrl: 'https://www.airbnb.com/rooms/1112719828551581049',
     guestyListingId: '677530f0999ee70012ff9be5',
@@ -246,14 +253,16 @@ export const PROPERTIES: Record<PropertySlug, Property> = {
   },
   'lambert-unit-2': {
     slug: 'lambert-unit-2',
-    title: 'River View Retreat: Unit 2',
-    shortTitle: 'Lambert Unit 2',
-    cardHeadline: 'Upstairs. 13 Lambert Lane.',
-    factStrip: '2 bedrooms · king + queen · sleeps 4 · river-view porch · smartlock · pets',
+    title: 'The Upstairs Apartment on Lambert Lane',
+    shortTitle: 'Lambert Lane — Upstairs',
+    cardHeadline: 'The upstairs apartment, with the porch over the river',
+    factStrip: '2 bedrooms · king + queen · sleeps 4 · porch over the Delaware · smartlock · pets welcome',
+    seoDescription:
+      'The upstairs apartment on Lambert Lane in Lambertville, New Jersey — two bedrooms, two baths, and a second-floor porch set above the Delaware. Sleeps four.',
     address: '13 Lambert Lane, Apt 2, Lambertville, NJ 08530',
     town: 'Lambertville, NJ',
     detailBody:
-      'Upstairs unit at 13 Lambert Lane. Two bedrooms — a king, a queen — each with its own bath. Big sectional in the living room. A second-floor porch that opens to the Delaware.',
+      "The whole upper floor of the Lambert Lane house, with the river in nearly every window. There are two bedrooms — one with a king, one with a queen — and each has its own bathroom, which makes it an easy place for two couples, or for a family that wants a little distance from one another at the end of the day. A long sectional fills the living room, angled, like everything up here, toward the water.\n\nThe porch is what people remember. It runs the length of the second floor above the Delaware, close enough to hear the water, and it is the right place to be — with a coffee in the early light, or after dark once the town has gone quiet. The bridge to New Hope stands just downriver; the walk across takes five minutes.\n\nThe kitchen is stocked to cook in and the table seats everyone. Bring a dog if you have one — they are welcome up here too.",
     sleeps: 4,
     amenities: [
       {
@@ -318,7 +327,7 @@ export const PROPERTIES: Record<PropertySlug, Property> = {
       },
     ],
     whereYoullBe:
-      '13 Lambert Lane, upstairs. The porch opens to the Delaware. The bridge to New Hope is five minutes on foot.',
+      'Lambert Lane is a quiet Lambertville street that ends at the river. From the upstairs porch the Delaware is right below you, and the bridge over to New Hope is a five-minute walk away.',
     airbnbListingId: '1169355149577601589',
     airbnbUrl: 'https://www.airbnb.com/rooms/1169355149577601589',
     guestyListingId: '677530f1ec75700012a49d9f',
@@ -345,14 +354,16 @@ export const PROPERTIES: Record<PropertySlug, Property> = {
   },
   'lambert-house': {
     slug: 'lambert-house',
-    title: 'River View Retreat: Entire House',
+    title: 'The Whole House on Lambert Lane',
     shortTitle: 'The Whole House',
-    cardHeadline: 'The whole house. 13 Lambert Lane.',
-    factStrip: '3 bedrooms · sleeps 8 · both units · river · pets',
+    cardHeadline: 'The whole house on Lambert Lane',
+    factStrip: '3 bedrooms · 3 baths · sleeps 8 · both apartments · fenced river yard · pets welcome',
+    seoDescription:
+      'Both apartments of the Lambert Lane duplex in Lambertville, booked together — three bedrooms, three baths, a fenced yard down to the Delaware, and a porch over the water. Sleeps eight.',
     address: '13 Lambert Lane, Lambertville, NJ 08530',
     town: 'Lambertville, NJ',
     detailBody:
-      'Book both Lambert units together. The whole duplex. Three bedrooms, three baths, sleeps eight. Private backyard. Same river. Same bridge.',
+      "Book both apartments together and the whole house on Lambert Lane is yours — three bedrooms, three bathrooms, and room for eight, with the fenced yard and the river to share between you.\n\nIt is the right call for the kind of trip where one household is not quite the whole party: two families travelling together, a group of old friends, a small reunion. Everyone gets a real bed and a door that closes, and nobody is negotiating over a bathroom. The downstairs apartment opens flat onto the yard and the fire pit; the upstairs one has the porch above the water. You can gather on one floor and slip away to the other.\n\nIt is the same house, simply taken whole — two kitchens, both stocked, and the bridge to New Hope five minutes away on foot.",
     sleeps: 8,
     amenities: [
       {
@@ -423,7 +434,7 @@ export const PROPERTIES: Record<PropertySlug, Property> = {
       },
     ],
     whereYoullBe:
-      '13 Lambert Lane — the whole house. Private backyard. River just past the fence.',
+      'Lambert Lane is a quiet street in Lambertville that runs down to the Delaware. The whole house is yours — the fenced yard, the porch above the water, and the river just past the back fence. New Hope is a five-minute walk across the bridge.',
     airbnbListingId: '1171507131547148743',
     airbnbUrl: 'https://www.airbnb.com/rooms/1171507131547148743',
     guestyListingId: '677530f016c6d400123fb70e',

@@ -6,16 +6,16 @@ import { EmailCapture } from '@/components/EmailCapture';
 
 /**
  * Home page (/) — assembles the v2 spec §3.1 sections:
- *   1. Hero — Main St Hideaway canal exterior + locked headline + subhead + Find a stay CTA
- *   2. About — editorial Zach-solo first-person About block
- *   3. Properties — 3-up grid + bundle SKU link
- *   4. About the towns — quiet sister-river-towns paragraph
- *   5. Email capture — "Coming back? I'll tell you first."
+ *   1. Hero — headline + subhead + Find a stay CTA
+ *   2. About — editorial brand-voice About block
+ *   3. The places — 3-up grid + whole-house link
+ *   4. Story teaser — the name's origin, links to /story
+ *   5. Email capture — "Coming back? We'll tell you first."
  *   6. Footer — lives in root layout
  *
- * All copy is locked verbatim in:
- *   /Users/zacharysimmons/The Burgerly/Brand Source of Truth/Outputs/
- *     2026-05-20-TASK-033c-v2-lock-and-lambert-copy-tight.md
+ * Copy is in the literary boutique voice locked under TASK-046:
+ *   /Users/zacharysimmons/The Burgerly/Lock and Lambert/Brand Source of
+ *     Truth/01 - Brand Voice and Copy.md
  */
 
 export default function HomePage() {
@@ -27,7 +27,7 @@ export default function HomePage() {
         photoAlt="The Lambert Lane backyard in Lambertville — hydrangeas, fence, and the New Hope-Lambertville Bridge through the trees"
         placeholderCaption="Lambert Lane — the river just past the fence"
         headline={<>A place at the lock. A place on Lambert.</>}
-        subhead="Three places to land. Two banks of the Delaware. One bridge between."
+        subhead="Three places to stay along the Delaware — in two old river towns that a single bridge makes one."
         ctaLabel="Find a stay"
         ctaHref="/stay"
         showScrollCue

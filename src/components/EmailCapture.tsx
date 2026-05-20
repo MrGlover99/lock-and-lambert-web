@@ -6,9 +6,9 @@ import { saveEmailSignup, type EmailSignup } from '@/lib/supabase';
 /**
  * EmailCapture — single-field newsletter capture per v2 spec §3.1 Section 5.
  *
- * Copy is locked verbatim in v2 copy doc Email capture row:
+ * Copy in the literary boutique voice locked under TASK-046:
  *   Headline: "Coming back? We'll tell you first."
- *   Sub: "One email when openings come up. One email when seasons change. Nothing else."
+ *   Sub: "An email when something opens up, and another when the season turns. Nothing else."
  *   Button: "Sign me up"
  *   Privacy note: "No spam. Unsubscribe any time."
  *
@@ -78,13 +78,13 @@ export function EmailCapture({
           className="font-display font-medium mb-4"
           style={{ fontSize: 'clamp(1.625rem, 3vw, 2.25rem)' }}
         >
-          Coming back? I&apos;ll tell you first.
+          Coming back? We&apos;ll tell you first.
         </h2>
         <p
           className={`font-display italic mb-8 max-w-prose mx-auto ${isInk ? 'text-stone' : 'text-stone'}`}
           style={{ fontSize: 'clamp(1.05rem, 1.5vw, 1.25rem)' }}
         >
-          One email when openings come up. One email when seasons change. Nothing else.
+          An email when something opens up, and another when the season turns. Nothing else.
         </p>
 
         {status === 'success' ? (
