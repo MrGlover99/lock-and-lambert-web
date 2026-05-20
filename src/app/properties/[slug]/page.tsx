@@ -8,6 +8,7 @@ import { WhereYoullBe } from '@/components/WhereYoullBe';
 import { GuestyBookingWidget } from '@/components/GuestyBookingWidget';
 import { CrossLink } from '@/components/CrossLink';
 import { EmailCapture } from '@/components/EmailCapture';
+import { PhotoGallery } from '@/components/PhotoGallery';
 
 /**
  * Per-property detail page. Per v2 spec §3.3, sections:
@@ -112,6 +113,9 @@ export default function PropertyDetailPage({ params }: PageProps) {
           </div>
         </div>
       </section>
+
+      {/* Photo gallery — masonry, full aspect, lightbox on click */}
+      <PhotoGallery photos={carouselPhotos} className="pb-16 sm:pb-20 lg:pb-24" />
 
       {/* Section 5 — Where you'll be */}
       <WhereYoullBe
