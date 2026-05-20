@@ -23,9 +23,9 @@ export default function HomePage() {
     <>
       <Hero
         variant="full"
-        photoSrc="/photos/main-st-hideaway/hero-canal-exterior.jpg"
-        photoAlt="Canal-side exterior of Main St Hideaway in New Hope, PA — white clapboard building with wooden lockhouse and canal walkway"
-        placeholderCaption="Main St Hideaway — canal-side exterior"
+        photoSrc="/photos/brand/bridge-delaware.jpg"
+        photoAlt="The New Hope-Lambertville Bridge spanning the Delaware River — green truss, reflected in still water, dramatic sky"
+        placeholderCaption="The bridge between"
         headline={<>A place at the lock. A place on Lambert.</>}
         subhead="Three places to land. Two banks of the Delaware. One bridge between."
         ctaLabel="Find a stay"
