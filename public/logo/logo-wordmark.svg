@@ -1,0 +1,10 @@
+<svg width="800" height="200" viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+  <title>Lock and Lambert — clean wordmark</title>
+  <desc>The clean wordmark version of the Lock and Lambert logo. Words only, no trussed bridge ampersand. The ampersand stays in copper for family continuity with the primary lockup; LOCK and LAMBERT are in warm black, letterspaced, in Cormorant Garamond serif. Town pairing in small caps below. Placeholder version generated 2026-05-20.</desc>
+
+  <rect x="0" y="0" width="800" height="200" fill="#F4EFE6"/>
+
+  <text x="400" y="120" font-family="'Cormorant Garamond', Georgia, 'Times New Roman', serif" font-size="84" font-weight="500" fill="#1A1816" text-anchor="middle" letter-spacing="8">LOCK<tspan dx="20" font-style="italic" font-weight="400" fill="#B8703A" font-size="92">&amp;</tspan><tspan dx="20" font-style="normal" font-weight="500" fill="#1A1816" font-size="84">LAMBERT</tspan></text>
+
+  <text x="400" y="165" font-family="'Inter', -apple-system, system-ui, sans-serif" font-size="16" font-weight="500" fill="#1A1816" text-anchor="middle" letter-spacing="6">NEW HOPE · LAMBERTVILLE</text>
+</svg>
