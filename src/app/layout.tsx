@@ -18,12 +18,21 @@ export const metadata: Metadata = {
     siteName: 'Lock & Lambert',
     type: 'website',
     locale: 'en_US',
+    images: [
+      {
+        url: '/photos/brand/bridge-delaware.jpg',
+        width: 1800,
+        height: 800,
+        alt: 'The New Hope-Lambertville Bridge over the Delaware River',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Lock & Lambert',
     description:
       'Three places to stay along the Delaware, in two old river towns joined by a single bridge.',
+    images: ['/photos/brand/bridge-delaware.jpg'],
   },
   icons: {
     icon: [

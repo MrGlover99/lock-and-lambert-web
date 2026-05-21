@@ -3,6 +3,7 @@ import { AboutSection } from '@/components/AboutSection';
 import { PropertyGrid } from '@/components/PropertyGrid';
 import { StorySection } from '@/components/StorySection';
 import { EmailCapture } from '@/components/EmailCapture';
+import { JsonLd, SITE_URL } from '@/components/JsonLd';
 
 /**
  * Home page (/) — assembles the v2 spec §3.1 sections:
@@ -18,9 +19,34 @@ import { EmailCapture } from '@/components/EmailCapture';
  *     Truth/01 - Brand Voice and Copy.md
  */
 
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': `${SITE_URL}/#organization`,
+  name: 'Lock & Lambert',
+  url: SITE_URL,
+  logo: `${SITE_URL}/logo/wordmark.png`,
+  description:
+    'Three places to stay along the Delaware River, in New Hope, Pennsylvania and Lambertville, New Jersey.',
+  areaServed: ['New Hope, Pennsylvania', 'Lambertville, New Jersey'],
+  sameAs: ['https://lockandlambert.guestybookings.com'],
+};
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${SITE_URL}/#website`,
+  name: 'Lock & Lambert',
+  url: SITE_URL,
+  publisher: { '@id': `${SITE_URL}/#organization` },
+};
+
 export default function HomePage() {
   return (
     <>
+      <JsonLd data={organizationSchema} />
+      <JsonLd data={websiteSchema} />
+
       <Hero
         variant="full"
         photoSrc="/photos/brand/home-hero-yard.jpg"

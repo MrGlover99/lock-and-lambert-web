@@ -26,6 +26,14 @@ export interface AmenityGroup {
   items: string[];
 }
 
+export interface GuestReview {
+  /** Verbatim guest words (may be a faithful excerpt). */
+  body: string;
+  author: string;
+  /** Where the guest is from, or when they stayed. */
+  attribution: string;
+}
+
 export interface Property {
   slug: PropertySlug;
   title: string;
@@ -38,6 +46,12 @@ export interface Property {
   town: 'New Hope, PA' | 'Lambertville, NJ';
   detailBody: string;
   sleeps: number;
+  /** Real Airbnb rating, review count and badge — current as of the
+   * Phase 0.5 account audit (2026-05-20). */
+  rating: { value: number; count: number; badge: string };
+  /** Verbatim guest reviews from the Airbnb listings. May be empty until
+   * more are pasted in (the River Deck + Whole House await their quotes). */
+  reviews: GuestReview[];
   /** Grouped amenities, brand-voiced, pulled from Airbnb 2026-05-20 */
   amenities: AmenityGroup[];
   whereYoullBe: string;
@@ -79,6 +93,24 @@ export const PROPERTIES: Record<PropertySlug, Property> = {
     detailBody:
       'Main Street, New Hope — the middle of everything, with the Delaware Canal and its towpath just out the back. The whole upper floor of the building is yours: dark walls, a low copper light, floors with the gentle unevenness of a place that has stood a long time, a leather couch and a wall of books and a panel of stained glass that catches the afternoon. It sleeps six across three queen beds, and the kitchen is stocked well enough that you could cook here all weekend and want to.\n\nOut the front door, New Hope is yours to walk — the shops and galleries, the riverfront, the Bucks County Playhouse, dinner wherever you like. Out the back, the patio opens straight onto the canal towpath, a weathered lockhouse a few steps along — the lock that gave the brand half its name. The middle of town and the quiet of the canal, ten steps apart.',
     sleeps: 6,
+    rating: { value: 5.0, count: 65, badge: 'Guest Favorite' },
+    reviews: [
+      {
+        body: 'Walking distance to everything in town... beds were very comfortable. The decor was beautiful.',
+        author: 'Tristin',
+        attribution: 'March 2026',
+      },
+      {
+        body: 'The place is just like the pictures. Clean and stocked, just perfect.',
+        author: 'Jeneen',
+        attribution: 'March 2026',
+      },
+      {
+        body: 'Charming, comfortable, and in such a beautiful setting. Everything felt thoughtfully prepared.',
+        author: 'Dominika',
+        attribution: 'March 2026',
+      },
+    ],
     amenities: [
       {
         group: 'Check-in & access',
@@ -156,6 +188,19 @@ export const PROPERTIES: Record<PropertySlug, Property> = {
     detailBody:
       "Lambert Lane runs down to the Delaware, and so does the garden level: a fully fenced lawn, a fire pit, a couple of chairs, and the river right there, just past the rails. Through the trees stands the green truss of the bridge to New Hope, a few minutes away on foot — and the antique shops, galleries and restaurants of Lambertville are closer still.\n\nInside, it is light and easy — pale walls, soft blush and green, a single level with no stairs to manage. One bedroom holds a queen, and the living room has a full pullout, so it sleeps four without anyone feeling sent to the couch. The kitchen is stocked to cook in, with a proper table to gather around.\n\nIt is a calm, uncomplicated place for a weekend — and an easy one to arrive at with a dog, or a small child, or both. We keep it ready for exactly that.",
     sleeps: 4,
+    rating: { value: 4.98, count: 112, badge: 'Guest Favorite' },
+    reviews: [
+      {
+        body: 'Warm, welcoming, and comfortable... beautifully decorated.',
+        author: 'Rachel',
+        attribution: 'April 2026',
+      },
+      {
+        body: "I immediately put on yacht rock as soon as I walked in the door. The setting and location in Lambertville couldn't be more perfect.",
+        author: 'Pamela',
+        attribution: 'New York City',
+      },
+    ],
     amenities: [
       {
         group: 'Check-in & access',
@@ -264,6 +309,8 @@ export const PROPERTIES: Record<PropertySlug, Property> = {
     detailBody:
       "From the upper floor of the house on Lambert Lane, the Delaware fills nearly every window — a real river view, not a distant glimpse of one. The deck is the heart of it: a wide one, set just above the water, with the green truss of the bridge to New Hope standing a short way downriver. The walk across takes five minutes, and the shops and restaurants of Lambertville sit at the end of the lane — close to everything, weddings in the river towns included.\n\nTwo bedrooms, a king and a queen, each with its own bathroom — easy for two couples, or for a family that wants a little distance at the end of the day. A long sectional fills the living room, angled, like everything up here, toward the water. The deck is the place you will keep going back to: a coffee in the early light, the river going by, the town gone quiet after dark.\n\nThe kitchen is stocked to cook in and the table seats everyone. Bring a dog if you have one — they are welcome up here too.",
     sleeps: 4,
+    rating: { value: 4.99, count: 103, badge: 'Guest Favorite' },
+    reviews: [],
     amenities: [
       {
         group: 'Check-in & access',
@@ -339,7 +386,7 @@ export const PROPERTIES: Record<PropertySlug, Property> = {
       'porch-river',
       'living-sectional-river',
       'living-alt',
-      'exterior-front',
+      'exterior-rear',
       'bedroom-king',
       'bedroom-king-alt',
       'bedroom-queen',
@@ -347,7 +394,7 @@ export const PROPERTIES: Record<PropertySlug, Property> = {
       'kitchen-alt',
       'bathroom-master',
       'dining-area',
-      'staircase',
+      'bedroom-queen-alt',
     ],
     showInHomeGrid: true,
     isBundle: false,
@@ -365,6 +412,8 @@ export const PROPERTIES: Record<PropertySlug, Property> = {
     detailBody:
       "Book both floors together and the whole house on Lambert Lane is yours — three bedrooms, three bathrooms, room for eight, with the garden and the river to share between you.\n\nIt is the house for the trip where one household is not quite the whole party: two families travelling together, a group of old friends, a small reunion, a wedding weekend that wants to stay under one roof. Everyone gets a real bed and a door that closes, and nobody is negotiating over a bathroom. The garden level opens flat onto the lawn and the fire pit; the river deck sits above the water upstairs. You can gather on one floor and slip away to the other.\n\nTwo kitchens, both stocked, the Delaware just past the back fence, and the bridge to New Hope five minutes away on foot.",
     sleeps: 8,
+    rating: { value: 5.0, count: 25, badge: 'Guest Favorite' },
+    reviews: [],
     amenities: [
       {
         group: 'Check-in & access',

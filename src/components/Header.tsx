@@ -41,6 +41,12 @@ export function Header() {
               Places
             </Link>
             <Link
+              href="/the-towns"
+              className="text-sm text-ink hover:text-copper-deep transition-colors duration-200 hidden sm:inline"
+            >
+              The Towns
+            </Link>
+            <Link
               href="/#about"
               className="text-sm text-ink hover:text-copper-deep transition-colors duration-200 hidden sm:inline"
             >

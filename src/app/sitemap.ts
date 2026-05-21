@@ -9,7 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const base = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://lockandlambert.com';
   const now = new Date();
 
-  const staticRoutes = ['', '/stay', '/story'].map((route) => ({
+  const staticRoutes = ['', '/stay', '/story', '/the-towns', '/faq'].map((route) => ({
     url: `${base}${route}`,
     lastModified: now,
     changeFrequency: 'monthly' as const,

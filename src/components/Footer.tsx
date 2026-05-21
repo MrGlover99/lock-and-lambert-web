@@ -50,6 +50,14 @@ export function Footer() {
             <ul className="text-sm text-cream/90 space-y-2">
               <li>
                 <Link
+                  href="/faq"
+                  className="hover:text-copper-bright transition-colors"
+                >
+                  Questions &amp; answers
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/privacy"
                   className="hover:text-copper-bright transition-colors"
                 >
