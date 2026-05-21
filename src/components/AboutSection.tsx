@@ -41,10 +41,10 @@ export function AboutSection() {
               </p>
 
               <p>
-                One is an apartment above 137 South Main in New Hope, in a building with the old
-                Delaware Canal and a weathered lockhouse just out the back door. The other two make
-                up a duplex on Lambert Lane in Lambertville, a quiet street with the river running
-                past the back fence.
+                One is on South Main Street, in the middle of New Hope — the old Delaware Canal and
+                a weathered lockhouse just out the back door, the shops and the Bucks County
+                Playhouse a short walk the other way. The other two share a house on Lambert Lane
+                in Lambertville, a quiet street that runs down to the river.
               </p>
 
               <p>

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     template: '%s — Lock & Lambert',
   },
   description:
-    'Three places to stay along the Delaware River — an apartment above 137 South Main in New Hope, Pennsylvania, and a riverside duplex on Lambert Lane in Lambertville, New Jersey. Smartlock check-in, stocked kitchens, pets welcome.',
+    'Three places to stay along the Delaware River — a home on Main Street in New Hope, Pennsylvania, and two more in a riverside house on Lambert Lane in Lambertville, New Jersey. Smartlock check-in, stocked kitchens, pets welcome.',
   openGraph: {
     title: 'Lock & Lambert',
     description:

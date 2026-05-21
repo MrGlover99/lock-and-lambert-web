@@ -131,7 +131,7 @@ export default function StoryPage() {
             <p className="prose-editorial text-cream/90">
               Today Lambertville is a town of antique shops and galleries, of old stone and
               clapboard houses, with a riverfront that has drawn people up from Philadelphia and
-              down from New York for generations. Lambert Lane &mdash; the quiet street our duplex
+              down from New York for generations. Lambert Lane &mdash; the quiet street our house
               sits on, with the Delaware just past the back fence &mdash; still carries the
               Senator&apos;s name. That lane, and that town, are the{' '}
               <span className="font-display italic font-normal text-copper-bright">Lambert</span> in

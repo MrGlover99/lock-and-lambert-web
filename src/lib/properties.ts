@@ -70,14 +70,14 @@ export const PROPERTIES: Record<PropertySlug, Property> = {
     slug: 'main-st-hideaway',
     title: 'Main St Hideaway',
     shortTitle: 'Main St Hideaway',
-    cardHeadline: 'Above 137 South Main, the towpath at the back door',
+    cardHeadline: 'Main Street, New Hope — the towpath at the back door',
     factStrip: '2 bedrooms · 3 queen beds · sleeps 6 · canal-side patio · smartlock · pets welcome',
     seoDescription:
-      'A two-bedroom apartment above 137 South Main in New Hope, Pennsylvania — dark walls, warm light, three queen beds, and a canal-side patio that opens onto the Delaware Canal towpath. Sleeps six.',
+      'A two-bedroom home on the upper floor of a building on Main Street in New Hope, Pennsylvania — dark walls, warm light, three queen beds, a canal-side patio, and the towpath out the back door. Sleeps six.',
     address: '137 S. Main Street (Rear), New Hope, PA 18938',
     town: 'New Hope, PA',
     detailBody:
-      'Up a private stair at the back of 137 South Main is a two-bedroom apartment that feels older and warmer than the street below it. The walls are dark, the lamps throw a low copper light, and the floors carry the gentle unevenness of a building that has stood a long time. There is a leather couch, a wall of books, a panel of stained glass that catches the afternoon. It sleeps six across three queen beds, and the kitchen is stocked well enough that you could cook here all weekend and want to.\n\nThe two doors are the pleasure of the place. Step out the front and you are on Main Street, New Hope, with the shops, the galleries, and the Delaware all a short walk in either direction. Step out the back and you are on the canal towpath — the water moving quietly past, a weathered lockhouse a few steps along, the lock that gave the brand half its name. Carry a coffee out to the canal-side patio, and the morning is yours.',
+      'Main Street, New Hope — the middle of everything, with the Delaware Canal and its towpath just out the back. The whole upper floor of the building is yours: dark walls, a low copper light, floors with the gentle unevenness of a place that has stood a long time, a leather couch and a wall of books and a panel of stained glass that catches the afternoon. It sleeps six across three queen beds, and the kitchen is stocked well enough that you could cook here all weekend and want to.\n\nOut the front door, New Hope is yours to walk — the shops and galleries, the riverfront, the Bucks County Playhouse, dinner wherever you like. Out the back, the patio opens straight onto the canal towpath, a weathered lockhouse a few steps along — the lock that gave the brand half its name. The middle of town and the quiet of the canal, ten steps apart.',
     sleeps: 6,
     amenities: [
       {
@@ -145,16 +145,16 @@ export const PROPERTIES: Record<PropertySlug, Property> = {
   },
   'lambert-unit-1': {
     slug: 'lambert-unit-1',
-    title: 'The Ground-Floor Apartment on Lambert Lane',
-    shortTitle: 'Lambert Lane — Ground Floor',
-    cardHeadline: 'The ground-floor apartment on Lambert Lane',
-    factStrip: '1 bedroom · queen + sofa bed · sleeps 4 · fenced river yard · smartlock · pets welcome',
+    title: 'The Garden Level on Lambert Lane',
+    shortTitle: 'The Garden Level',
+    cardHeadline: 'The Garden Level — the river just past the fence',
+    factStrip: '1 bedroom · queen + sofa bed · sleeps 4 · fenced river garden · smartlock · pets welcome',
     seoDescription:
-      'The light-filled ground-floor apartment of a duplex on Lambert Lane in Lambertville, New Jersey — one bedroom, a fenced yard down to the Delaware with a fire pit, single-level, pets welcome. Sleeps four.',
+      'The garden level of a house on Lambert Lane in Lambertville, New Jersey — a fenced lawn down to the Delaware, a fire pit, one bedroom, single-level, pets welcome. Sleeps four.',
     address: '13 Lambert Lane, Apt 1, Lambertville, NJ 08530',
     town: 'Lambertville, NJ',
     detailBody:
-      "The ground floor of a two-apartment house on Lambert Lane, a quiet street that ends at the river. Inside, it is light where the New Hope place is dark — pale walls, soft blush and green, everything on one level with no stairs to manage. One bedroom holds a queen; the living room has a full pullout, so the apartment sleeps four without anyone feeling sent to the couch. The kitchen is stocked to cook in, and there is a proper table to gather around.\n\nThe back of the house is the reason to book it. A fully fenced yard runs down toward the Delaware — patio chairs, a fire pit, a grill, a couple of bikes leaning by the fence — and the river is right there, just past the rails. Through the trees you can see the green truss of the bridge to New Hope, five minutes away on foot.\n\nIt is an easy place to arrive with a dog, or a small child, or both — and we keep it ready for exactly that.",
+      "Lambert Lane runs down to the Delaware, and so does the garden level: a fully fenced lawn, a fire pit, a couple of chairs, and the river right there, just past the rails. Through the trees stands the green truss of the bridge to New Hope, a few minutes away on foot — and the antique shops, galleries and restaurants of Lambertville are closer still.\n\nInside, it is light and easy — pale walls, soft blush and green, a single level with no stairs to manage. One bedroom holds a queen, and the living room has a full pullout, so it sleeps four without anyone feeling sent to the couch. The kitchen is stocked to cook in, with a proper table to gather around.\n\nIt is a calm, uncomplicated place for a weekend — and an easy one to arrive at with a dog, or a small child, or both. We keep it ready for exactly that.",
     sleeps: 4,
     amenities: [
       {
@@ -229,7 +229,7 @@ export const PROPERTIES: Record<PropertySlug, Property> = {
       },
     ],
     whereYoullBe:
-      'Lambert Lane is a quiet street in Lambertville that runs down to the Delaware. The river is just past the back fence, and the bridge across to New Hope is a five-minute walk from the door.',
+      'Lambert Lane is a quiet street in Lambertville that runs down to the Delaware. The fenced garden ends at the river, and the bridge across to New Hope is a few minutes on foot from the door.',
     airbnbListingId: '1112719828551581049',
     airbnbUrl: 'https://www.airbnb.com/rooms/1112719828551581049',
     guestyListingId: '677530f0999ee70012ff9be5',
@@ -253,16 +253,16 @@ export const PROPERTIES: Record<PropertySlug, Property> = {
   },
   'lambert-unit-2': {
     slug: 'lambert-unit-2',
-    title: 'The Upstairs Apartment on Lambert Lane',
-    shortTitle: 'Lambert Lane — Upstairs',
-    cardHeadline: 'The upstairs apartment, with the porch over the river',
-    factStrip: '2 bedrooms · king + queen · sleeps 4 · porch over the Delaware · smartlock · pets welcome',
+    title: 'The River Deck on Lambert Lane',
+    shortTitle: 'The River Deck',
+    cardHeadline: 'The River Deck — the upper floor, over the Delaware',
+    factStrip: '2 bedrooms · king + queen · sleeps 4 · deck over the Delaware · smartlock · pets welcome',
     seoDescription:
-      'The upstairs apartment on Lambert Lane in Lambertville, New Jersey — two bedrooms, two baths, and a second-floor porch set above the Delaware. Sleeps four.',
+      'The upper floor of a house on Lambert Lane in Lambertville, New Jersey — two bedrooms, two baths, and a wide deck set above the Delaware, steps from the bridge to New Hope. Sleeps four.',
     address: '13 Lambert Lane, Apt 2, Lambertville, NJ 08530',
     town: 'Lambertville, NJ',
     detailBody:
-      "The whole upper floor of the Lambert Lane house, with the river in nearly every window. There are two bedrooms — one with a king, one with a queen — and each has its own bathroom, which makes it an easy place for two couples, or for a family that wants a little distance from one another at the end of the day. A long sectional fills the living room, angled, like everything up here, toward the water.\n\nThe porch is what people remember. It runs the length of the second floor above the Delaware, close enough to hear the water, and it is the right place to be — with a coffee in the early light, or after dark once the town has gone quiet. The bridge to New Hope stands just downriver; the walk across takes five minutes.\n\nThe kitchen is stocked to cook in and the table seats everyone. Bring a dog if you have one — they are welcome up here too.",
+      "From the upper floor of the house on Lambert Lane, the Delaware fills nearly every window — a real river view, not a distant glimpse of one. The deck is the heart of it: a wide one, set just above the water, with the green truss of the bridge to New Hope standing a short way downriver. The walk across takes five minutes, and the shops and restaurants of Lambertville sit at the end of the lane — close to everything, weddings in the river towns included.\n\nTwo bedrooms, a king and a queen, each with its own bathroom — easy for two couples, or for a family that wants a little distance at the end of the day. A long sectional fills the living room, angled, like everything up here, toward the water. The deck is the place you will keep going back to: a coffee in the early light, the river going by, the town gone quiet after dark.\n\nThe kitchen is stocked to cook in and the table seats everyone. Bring a dog if you have one — they are welcome up here too.",
     sleeps: 4,
     amenities: [
       {
@@ -310,7 +310,7 @@ export const PROPERTIES: Record<PropertySlug, Property> = {
       {
         group: 'Outside',
         items: [
-          'Second-floor porch over the Delaware',
+          'Second-floor deck over the Delaware',
           'Backyard with outdoor dining',
           'Bikes',
         ],
@@ -327,14 +327,14 @@ export const PROPERTIES: Record<PropertySlug, Property> = {
       },
     ],
     whereYoullBe:
-      'Lambert Lane is a quiet Lambertville street that ends at the river. From the upstairs porch the Delaware is right below you, and the bridge over to New Hope is a five-minute walk away.',
+      'Lambert Lane is a quiet Lambertville street that ends at the river. From the upstairs deck the Delaware is right below you, and the bridge over to New Hope is a five-minute walk away.',
     airbnbListingId: '1169355149577601589',
     airbnbUrl: 'https://www.airbnb.com/rooms/1169355149577601589',
     guestyListingId: '677530f1ec75700012a49d9f',
     guestyWidgetEnvVar: 'NEXT_PUBLIC_GUESTY_LISTING_WIDGET_LAMBERT_UNIT_2',
     photoSlugs: [
-      // Hero swapped to porch-river per founder direction 2026-05-20 —
-      // Unit 2's marquee feature is the second-floor porch over the Delaware,
+      // Hero leads with the river-deck shot (file: porch-river.jpg) — the
+      // River Deck's wide deck over the Delaware is the marquee feature,
       // not the interior. Place-anchor faster.
       'porch-river',
       'living-sectional-river',
@@ -357,13 +357,13 @@ export const PROPERTIES: Record<PropertySlug, Property> = {
     title: 'The Whole House on Lambert Lane',
     shortTitle: 'The Whole House',
     cardHeadline: 'The whole house on Lambert Lane',
-    factStrip: '3 bedrooms · 3 baths · sleeps 8 · both apartments · fenced river yard · pets welcome',
+    factStrip: '3 bedrooms · 3 baths · sleeps 8 · both floors · garden + river deck · pets welcome',
     seoDescription:
-      'Both apartments of the Lambert Lane duplex in Lambertville, booked together — three bedrooms, three baths, a fenced yard down to the Delaware, and a porch over the water. Sleeps eight.',
+      'Both floors of the house on Lambert Lane in Lambertville, booked together — three bedrooms, three baths, a fenced river garden, and a wide deck above the water. Sleeps eight.',
     address: '13 Lambert Lane, Lambertville, NJ 08530',
     town: 'Lambertville, NJ',
     detailBody:
-      "Book both apartments together and the whole house on Lambert Lane is yours — three bedrooms, three bathrooms, and room for eight, with the fenced yard and the river to share between you.\n\nIt is the right call for the kind of trip where one household is not quite the whole party: two families travelling together, a group of old friends, a small reunion. Everyone gets a real bed and a door that closes, and nobody is negotiating over a bathroom. The downstairs apartment opens flat onto the yard and the fire pit; the upstairs one has the porch above the water. You can gather on one floor and slip away to the other.\n\nIt is the same house, simply taken whole — two kitchens, both stocked, and the bridge to New Hope five minutes away on foot.",
+      "Book both floors together and the whole house on Lambert Lane is yours — three bedrooms, three bathrooms, room for eight, with the garden and the river to share between you.\n\nIt is the house for the trip where one household is not quite the whole party: two families travelling together, a group of old friends, a small reunion, a wedding weekend that wants to stay under one roof. Everyone gets a real bed and a door that closes, and nobody is negotiating over a bathroom. The garden level opens flat onto the lawn and the fire pit; the river deck sits above the water upstairs. You can gather on one floor and slip away to the other.\n\nTwo kitchens, both stocked, the Delaware just past the back fence, and the bridge to New Hope five minutes away on foot.",
     sleeps: 8,
     amenities: [
       {
@@ -414,7 +414,7 @@ export const PROPERTIES: Record<PropertySlug, Property> = {
         group: 'Outside',
         items: [
           'Private fully-fenced backyard',
-          'Second-floor porch over the Delaware',
+          'Second-floor deck over the Delaware',
           'Patio + outdoor dining + outdoor furniture',
           'Fire pit',
           'BBQ grill',
@@ -434,7 +434,7 @@ export const PROPERTIES: Record<PropertySlug, Property> = {
       },
     ],
     whereYoullBe:
-      'Lambert Lane is a quiet street in Lambertville that runs down to the Delaware. The whole house is yours — the fenced yard, the porch above the water, and the river just past the back fence. New Hope is a five-minute walk across the bridge.',
+      'Lambert Lane is a quiet street in Lambertville that runs down to the Delaware. The whole house is yours — the garden, the deck above the water, and the river just past the back fence. New Hope is a five-minute walk across the bridge.',
     airbnbListingId: '1171507131547148743',
     airbnbUrl: 'https://www.airbnb.com/rooms/1171507131547148743',
     guestyListingId: '677530f016c6d400123fb70e',
