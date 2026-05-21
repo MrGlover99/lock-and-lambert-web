@@ -9,9 +9,10 @@ import type { ReactNode } from 'react';
  *   - band: ~50vh. /stay header.
  *   - slim: ~35vh. /properties/[slug] header alternative (when not using carousel).
  *
- * Hero text overlays the photo with a soft scrim. Per v2 spec §3.1:
- * "Lightly darkened for text overlay readability." We use a gradient from
- * ink/40 at the bottom to ink/15 at the top so the photo still reads.
+ * Hero text sits inside a soft warm-black panel laid over the photo, so it
+ * stays legible over any image — a bright sky included. A light, even scrim
+ * gives the photo behind it a single cohesive tone. (Updated under the
+ * TASK-046 SEO follow-on after the founder flagged weak text contrast.)
  *
  * Text alignment is centered on full (home), left on band/slim (paged context).
  *
@@ -97,12 +98,18 @@ export function Hero({
         )}
       </div>
 
-      {/* Scrim — gradient overlay for text legibility */}
-      <div className="absolute inset-0 bg-gradient-to-b from-ink/15 via-ink/25 to-ink/55 pointer-events-none" />
+      {/* Scrim — a light, even darkening so the photo reads as one tone
+          and the text panel sits naturally on it */}
+      <div className="absolute inset-0 bg-ink/25 pointer-events-none" />
 
-      {/* Text overlay */}
+      {/* Text overlay — the copy sits inside a soft warm-black panel so it
+          stays legible over any photo, a bright sky included */}
       <div className="relative z-10 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 w-full">
-        <div className={variant === 'full' ? 'max-w-3xl mx-auto' : 'max-w-2xl'}>
+        <div
+          className={`bg-ink/65 px-6 py-8 sm:px-10 sm:py-12 lg:px-12 lg:py-14 ${
+            variant === 'full' ? 'max-w-3xl mx-auto text-center' : 'max-w-2xl text-left'
+          }`}
+        >
           <h1
             className="font-display font-medium text-cream leading-[1.05] tracking-tight"
             style={{ fontSize: 'clamp(2.5rem, 7vw, 5.5rem)' }}
