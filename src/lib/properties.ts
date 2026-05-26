@@ -310,7 +310,28 @@ export const PROPERTIES: Record<PropertySlug, Property> = {
       "From the upper floor of the house on Lambert Lane, the Delaware fills nearly every window — a real river view, not a distant glimpse of one. The deck is the heart of it: a wide one, set just above the water, with the green truss of the bridge to New Hope standing a short way downriver. The walk across takes five minutes, and the shops and restaurants of Lambertville sit at the end of the lane — close to everything, weddings in the river towns included.\n\nTwo bedrooms, a king and a queen, each with its own bathroom — easy for two couples, or for a family that wants a little distance at the end of the day. A long sectional fills the living room, angled, like everything up here, toward the water. The deck is the place you will keep going back to: a coffee in the early light, the river going by, the town gone quiet after dark.\n\nThe kitchen is stocked to cook in and the table seats everyone. Bring a dog if you have one — they are welcome up here too.",
     sleeps: 4,
     rating: { value: 4.99, count: 103, badge: 'Guest Favorite' },
-    reviews: [],
+    reviews: [
+      {
+        body: 'Very pretty to look out at the beautifully lit bridge at night. Easy walk to all of the restaurants and shops in New Hope, PA as well as Lambertville!',
+        author: 'Beth',
+        attribution: 'October 2025',
+      },
+      {
+        body: "The deck was fantastic on a warm spring day to sit outside and enjoy the river... The beds were the most comfy beds I've ever slept in.",
+        author: 'Nicole',
+        attribution: 'April 2026',
+      },
+      {
+        body: 'Amazing views of the river from the living room, upstairs bedroom, and deck. It is in the heart of downtown, walkable to shops and restaurants in both Lambertville and New Hope.',
+        author: 'Ana Felisa',
+        attribution: 'April 2026',
+      },
+      {
+        body: 'Had great days exploring on foot and returning to relax on the comfy couch and heavenly beds.',
+        author: 'Kristen',
+        attribution: 'May 2026',
+      },
+    ],
     amenities: [
       {
         group: 'Check-in & access',
@@ -413,7 +434,33 @@ export const PROPERTIES: Record<PropertySlug, Property> = {
       "Book both floors together and the whole house on Lambert Lane is yours — three bedrooms, three bathrooms, room for eight, with the garden and the river to share between you.\n\nIt is the house for the trip where one household is not quite the whole party: two families travelling together, a group of old friends, a small reunion, a wedding weekend that wants to stay under one roof. Everyone gets a real bed and a door that closes, and nobody is negotiating over a bathroom. The garden level opens flat onto the lawn and the fire pit; the river deck sits above the water upstairs. You can gather on one floor and slip away to the other.\n\nTwo kitchens, both stocked, the Delaware just past the back fence, and the bridge to New Hope five minutes away on foot.",
     sleeps: 8,
     rating: { value: 5.0, count: 25, badge: 'Guest Favorite' },
-    reviews: [],
+    reviews: [
+      {
+        body: 'We loved sipping our morning coffee as we looked out over the Delaware River.',
+        author: 'Michael',
+        attribution: 'March 2026',
+      },
+      {
+        body: 'We stayed here the night before our wedding... two distinct spaces for privacy, yet you can gather together as well. The river views are exquisite.',
+        author: 'The Angel',
+        attribution: 'January 2026',
+      },
+      {
+        body: 'The yard space and fire pit overlooking the river were lovely and an ideal gathering space for our group.',
+        author: 'Lauren',
+        attribution: 'November 2025',
+      },
+      {
+        body: 'The views of the river are stunning—especially from the backyard seating area... We loved starting and ending our days out there.',
+        author: 'April',
+        attribution: 'April 2026',
+      },
+      {
+        body: 'The location is perfect - just across the bridge from New Hope. Lambertville is also just as fun to explore & being on that side of the bridge gave us access to both cities.',
+        author: 'Rebeka',
+        attribution: 'March 2026',
+      },
+    ],
     amenities: [
       {
         group: 'Check-in & access',
