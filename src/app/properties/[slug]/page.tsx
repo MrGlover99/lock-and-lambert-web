@@ -5,7 +5,7 @@ import { ALL_SLUGS, getProperty, type Property } from '@/lib/properties';
 import { PhotoCarousel, type CarouselPhoto } from '@/components/PhotoCarousel';
 import { AmenityList } from '@/components/AmenityList';
 import { WhereYoullBe } from '@/components/WhereYoullBe';
-import { GuestyBookingWidget } from '@/components/GuestyBookingWidget';
+import { BookOnAirbnb } from '@/components/BookOnAirbnb';
 import { CrossLink } from '@/components/CrossLink';
 import { EmailCapture } from '@/components/EmailCapture';
 import { PhotoGallery } from '@/components/PhotoGallery';
@@ -195,10 +195,12 @@ export default function PropertyDetailPage({ params }: PageProps) {
             </div>
           </div>
 
-          {/* Right column — sticky booking widget on desktop */}
+          {/* Right column — sticky booking sidebar on desktop. Phase 1.5
+              (TASK-076): Airbnb-redirect funnel until the direct-booking
+              gates clear (TASK-053 family). */}
           <div className="lg:col-span-1">
             <div className="lg:sticky lg:top-24">
-              <GuestyBookingWidget property={property} />
+              <BookOnAirbnb property={property} />
             </div>
           </div>
         </div>
