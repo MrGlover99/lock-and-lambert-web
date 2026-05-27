@@ -24,6 +24,16 @@ export default function PrivacyPage() {
       </h1>
       <p className="text-stone text-sm mb-12">Last updated: May 2026</p>
 
+      {/* Phase 1.5 framing (TASK-076, 2026-05-26) -- bookings are handled
+          through Airbnb during the Phase 1.5 cutover; Airbnb's policies
+          govern the stay. This page covers the L&L website only. */}
+      <div className="mb-10 border-l-2 border-copper/50 pl-5 py-1">
+        <p className="font-display italic text-stone leading-relaxed" style={{ fontSize: 'clamp(1rem, 1.4vw, 1.125rem)' }}>
+          Bookings are handled through Airbnb. Airbnb&rsquo;s Terms of Service and Privacy Policy
+          govern your stay. This page covers Lock &amp; Lambert&rsquo;s website data practices only.
+        </p>
+      </div>
+
       <div className="prose max-w-prose space-y-6 text-ink leading-relaxed">
         {/* Placeholder text in the brand voice (TASK-046). Real legal copy
             from a lawyer is still required before hard launch. */}
