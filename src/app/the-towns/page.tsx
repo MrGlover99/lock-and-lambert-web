@@ -155,6 +155,45 @@ export default function TheTownsPage() {
         </div>
       </section>
 
+      {/* For dinner -- the one curated dining recommendation. Per file 01
+          v1.1 §11 (Burgerly cross-reference, narrowly permitted): The
+          Burgerly is the only restaurant named on the L&L site, framed as
+          curation rather than ownership, in L&L's literary register (NOT
+          Burgerly's punchy fragment-stacked rhythm). Other local
+          restaurants stay un-named (Hard Rule #3 holds for them). */}
+      <section className="bg-cream py-16 sm:py-20 lg:py-24" aria-labelledby="for-dinner-heading">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <h2
+            id="for-dinner-heading"
+            className="font-display font-medium text-ink mb-6"
+            style={{ fontSize: 'clamp(1.875rem, 3.5vw, 2.75rem)' }}
+          >
+            For dinner
+          </h2>
+          <div className="space-y-6">
+            <P>
+              When guests ask where to eat, we point them downstairs.{' '}
+              <a
+                href="https://theburgerly.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-copper-deep border-b border-copper/40 hover:border-copper transition-colors"
+              >
+                The Burgerly
+              </a>{' '}
+              is the chef-driven burger room directly below Main St Hideaway in New Hope &mdash; a
+              brisket-chuck-short-rib blend on a brioche bun, sauces made in-house, a small
+              short-list of sides, and a wall of jazz on vinyl behind the counter. One short
+              flight of stairs separates the two front doors.
+            </P>
+            <P>
+              Beyond that one recommendation, the river towns are well-stocked with places to
+              eat and drink, and we will let you find your own way through them.
+            </P>
+          </div>
+        </div>
+      </section>
+
       {/* A weekend here */}
       <section className="bg-cream py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
