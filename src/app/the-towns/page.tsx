@@ -172,7 +172,7 @@ export default function TheTownsPage() {
           </h2>
           <div className="space-y-6">
             <P>
-              When guests ask where to eat, we point them downstairs.{' '}
+              When guests ask where to eat, we point them to{' '}
               <a
                 href="https://theburgerly.com"
                 target="_blank"
@@ -181,10 +181,9 @@ export default function TheTownsPage() {
               >
                 The Burgerly
               </a>{' '}
-              is the chef-driven burger room directly below Main St Hideaway in New Hope &mdash; a
-              brisket-chuck-short-rib blend on a brioche bun, sauces made in-house, a small
-              short-list of sides, and a wall of jazz on vinyl behind the counter. One short
-              flight of stairs separates the two front doors.
+              &mdash; a chef-driven burger room in New Hope. A brisket-chuck-short-rib blend on
+              a brioche bun, sauces made in-house, a small short-list of sides, and a wall of
+              jazz on vinyl behind the counter. Open for lunch and dinner.
             </P>
             <P>
               Beyond that one recommendation, the river towns are well-stocked with places to
